@@ -38,7 +38,9 @@ const InstagramCarousel = () => {
             </h2>
           </div>
           <a
-            href="#"
+            href="https://www.instagram.com/guardiansstudios/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[0.72rem] uppercase tracking-[0.22em] link-underline self-start md:self-end"
           >
             <Instagram className="h-4 w-4" /> Follow on Instagram
@@ -52,7 +54,7 @@ const InstagramCarousel = () => {
                 key={i}
                 className="pl-4 md:pl-6 basis-4/5 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
               >
-                <a href="#" className="group block">
+                <a href="https://www.instagram.com/guardiansstudios/" target="_blank" rel="noopener noreferrer" className="group block">
                   <div className="relative aspect-square overflow-hidden bg-background">
                     <img
                       src={p.img}
