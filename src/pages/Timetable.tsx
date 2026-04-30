@@ -1,0 +1,122 @@
+import { useState } from "react";
+import SiteLayout from "@/components/layout/SiteLayout";
+import PageHero, { FinalCta } from "@/components/PageHero";
+import hero from "@/assets/hero.jpg";
+import { cn } from "@/lib/utils";
+
+const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const filters = ["All", "Pilates", "Yoga", "Strength", "Recovery"];
+
+const schedule: Record<string, { time: string; class: string; coach: string; type: string }[]> = {
+  Mon: [
+    { time: "06:30", class: "Reformer Pilates", coach: "Mara Lin", type: "Pilates" },
+    { time: "08:00", class: "Strength & Conditioning", coach: "Alex Carter", type: "Strength" },
+    { time: "12:30", class: "Slow Flow Yoga", coach: "Iris Bennett", type: "Yoga" },
+    { time: "18:00", class: "Mat Pilates", coach: "Mara Lin", type: "Pilates" },
+    { time: "19:30", class: "Recovery Ritual", coach: "Daniel Reyes", type: "Recovery" },
+  ],
+  Tue: [
+    { time: "07:00", class: "Vinyasa Yoga", coach: "Iris Bennett", type: "Yoga" },
+    { time: "09:00", class: "Reformer Pilates", coach: "Mara Lin", type: "Pilates" },
+    { time: "17:30", class: "Strength Circuit", coach: "Alex Carter", type: "Strength" },
+  ],
+  Wed: [
+    { time: "06:30", class: "Mat Pilates", coach: "Mara Lin", type: "Pilates" },
+    { time: "12:00", class: "Mobility & Breath", coach: "Iris Bennett", type: "Yoga" },
+    { time: "18:30", class: "Reformer Pilates", coach: "Mara Lin", type: "Pilates" },
+  ],
+  Thu: [
+    { time: "07:00", class: "Strength & Conditioning", coach: "Alex Carter", type: "Strength" },
+    { time: "10:00", class: "Pre & Post Natal Pilates", coach: "Mara Lin", type: "Pilates" },
+    { time: "19:00", class: "Slow Flow Yoga", coach: "Iris Bennett", type: "Yoga" },
+  ],
+  Fri: [
+    { time: "06:30", class: "Reformer Pilates", coach: "Mara Lin", type: "Pilates" },
+    { time: "12:30", class: "Recovery Ritual", coach: "Daniel Reyes", type: "Recovery" },
+    { time: "17:30", class: "Strength Circuit", coach: "Alex Carter", type: "Strength" },
+  ],
+  Sat: [
+    { time: "08:00", class: "Vinyasa Yoga", coach: "Iris Bennett", type: "Yoga" },
+    { time: "09:30", class: "Reformer Pilates", coach: "Mara Lin", type: "Pilates" },
+    { time: "11:00", class: "Strength & Conditioning", coach: "Alex Carter", type: "Strength" },
+  ],
+  Sun: [
+    { time: "09:00", class: "Slow Flow Yoga", coach: "Iris Bennett", type: "Yoga" },
+    { time: "10:30", class: "Recovery Ritual", coach: "Daniel Reyes", type: "Recovery" },
+  ],
+};
+
+const Timetable = () => {
+  const [day, setDay] = useState("Mon");
+  const [filter, setFilter] = useState("All");
+  const list = schedule[day].filter((c) => filter === "All" || c.type === filter);
+
+  return (
+    <SiteLayout>
+      <PageHero
+        eyebrow="Timetable"
+        title="Classes &"
+        italic="bookings."
+        intro="Browse the week, filter by discipline, and book your spot. 1:1 sessions can be requested via the contact page."
+        image={hero}
+      />
+
+      <section className="container-x py-16 md:py-24">
+        {/* Filters */}
+        <div className="flex flex-wrap items-center gap-2 mb-8">
+          <span className="eyebrow mr-2">Filter</span>
+          {filters.map((f) => (
+            <button
+              key={f}
+              onClick={() => setFilter(f)}
+              className={cn(
+                "px-4 py-2 text-[0.72rem] uppercase tracking-[0.18em] border transition-colors",
+                filter === f ? "bg-foreground text-background border-foreground" : "border-border hover:bg-surface"
+              )}
+            >{f}</button>
+          ))}
+        </div>
+
+        {/* Days */}
+        <div className="grid grid-cols-7 border border-border">
+          {days.map((d) => (
+            <button
+              key={d}
+              onClick={() => setDay(d)}
+              className={cn(
+                "py-4 text-[0.72rem] uppercase tracking-[0.2em] border-r last:border-r-0 border-border transition-colors",
+                day === d ? "bg-foreground text-background" : "bg-background hover:bg-surface"
+              )}
+            >{d}</button>
+          ))}
+        </div>
+
+        {/* Schedule */}
+        <ul className="mt-8 divide-y divide-border border-y border-border">
+          {list.length === 0 && (
+            <li className="py-10 text-center text-muted-foreground">No classes match this filter.</li>
+          )}
+          {list.map((c, i) => (
+            <li key={i} className="grid grid-cols-12 gap-4 py-6 items-center">
+              <div className="col-span-3 md:col-span-2 font-serif text-3xl">{c.time}</div>
+              <div className="col-span-9 md:col-span-5">
+                <p className="font-serif text-2xl">{c.class}</p>
+                <p className="eyebrow mt-1">{c.type}</p>
+              </div>
+              <div className="col-span-7 md:col-span-3 text-sm text-muted-foreground">{c.coach}</div>
+              <div className="col-span-5 md:col-span-2 text-right">
+                <button className="text-[0.72rem] uppercase tracking-[0.2em] border border-foreground/20 px-4 py-2.5 hover:bg-foreground hover:text-background transition-colors">
+                  Book
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <FinalCta />
+    </SiteLayout>
+  );
+};
+
+export default Timetable;
