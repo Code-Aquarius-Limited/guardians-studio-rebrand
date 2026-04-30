@@ -40,7 +40,7 @@ const Footer = () => {
 
           <div className="md:col-span-2">
             <p className="eyebrow mb-5">Connect</p>
-            <a href="#" className="inline-flex items-center gap-2 text-sm link-underline">
+            <a href="https://www.instagram.com/guardiansstudios/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm link-underline">
               <Instagram className="h-4 w-4" /> Instagram
             </a>
           </div>
