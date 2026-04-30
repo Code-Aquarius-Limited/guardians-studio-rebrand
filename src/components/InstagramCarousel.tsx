@@ -38,7 +38,9 @@ const InstagramCarousel = () => {
             </h2>
           </div>
           <a
-            href="#"
+            href="https://www.instagram.com/guardiansstudios/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[0.72rem] uppercase tracking-[0.22em] link-underline self-start md:self-end"
           >
             <Instagram className="h-4 w-4" /> Follow on Instagram
