@@ -3,6 +3,7 @@ import { ArrowRight, ArrowDown } from "lucide-react";
 import SiteLayout from "@/components/layout/SiteLayout";
 import ServiceCard from "@/components/ServiceCard";
 import { FinalCta } from "@/components/PageHero";
+import InstagramCarousel from "@/components/InstagramCarousel";
 import hero from "@/assets/hero.jpg";
 import pt from "@/assets/pt.jpg";
 import pilates from "@/assets/pilates.jpg";
@@ -185,6 +186,8 @@ const Index = () => {
           ))}
         </div>
       </section>
+
+      <InstagramCarousel />
 
       <FinalCta />
     </SiteLayout>
