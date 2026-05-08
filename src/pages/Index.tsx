@@ -61,7 +61,7 @@ const Index = () => {
           <div className="md:col-span-6 md:col-start-7">
             <p className="text-lg leading-relaxed text-foreground/80">
               Guardians Studio is a small, considered space in North West London where coaching, recovery and community
-              live under one roof. Our work is rooted in longevity — training, treatment and rituals you can return to
+              live under one roof. Our work is rooted in longevity, training, treatment and rituals you can return to
               for the next forty years.
             </p>
             <Link to="/about" className="inline-flex items-center gap-2 mt-8 text-[0.72rem] uppercase tracking-[0.22em] link-underline">
