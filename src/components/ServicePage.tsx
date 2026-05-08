@@ -36,7 +36,7 @@ const ServicePage = (p: ServicePageProps) => (
             </Link>
           </div>
         </div>
-        <div className="md:col-span-6 relative min-h-[360px] overflow-hidden rounded-3xl">
+        <div className="md:col-span-6 relative min-h-[360px] overflow-hidden">
           <img src={p.hero} alt={p.title} className="absolute inset-0 h-full w-full object-cover" />
         </div>
       </div>
