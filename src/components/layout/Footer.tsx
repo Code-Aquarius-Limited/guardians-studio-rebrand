@@ -32,6 +32,7 @@ const Footer = () => {
             <ul className="space-y-2.5 text-sm">
               <li><Link to="/about" className="link-underline">About</Link></li>
               <li><Link to="/services" className="link-underline">Services</Link></li>
+              <li><Link to="/team" className="link-underline">The Team</Link></li>
               <li><Link to="/studio" className="link-underline">The Studio</Link></li>
               <li><Link to="/timetable" className="link-underline">Timetable</Link></li>
               <li><Link to="/contact" className="link-underline">Contact</Link></li>

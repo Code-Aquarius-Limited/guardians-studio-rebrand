@@ -5,11 +5,15 @@ import { cn } from "@/lib/utils";
 
 const services = [
   { label: "Personal Training", to: "/services/personal-training" },
-  { label: "Pilates", to: "/services/pilates" },
+  { label: "Pilates 1:1", to: "/services/pilates-1-1" },
+  { label: "Reformer Pilates", to: "/services/reformer-pilates" },
+  { label: "Mat Pilates", to: "/services/mat-pilates" },
+  { label: "Pre & Post Natal Pilates", to: "/services/pre-post-natal-pilates" },
   { label: "Yoga", to: "/services/yoga" },
-  { label: "Recovery", to: "/services/recovery" },
-  { label: "Physiotherapy & Massage", to: "/services/physiotherapy" },
-  { label: "Pre & Post Natal", to: "/services/pre-post-natal" },
+  { label: "Massage", to: "/services/massage" },
+  { label: "Physiotherapy", to: "/services/physiotherapy" },
+  { label: "Red Light Sauna", to: "/services/red-light-sauna" },
+  { label: "Cold Plunge Therapy", to: "/services/cold-plunge" },
 ];
 
 const Header = () => {
@@ -71,6 +75,7 @@ const Header = () => {
             </div>
           </div>
           <NavLink to="/studio" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>The Studio</NavLink>
+          <NavLink to="/team" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>The Team</NavLink>
           <NavLink to="/timetable" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>Timetable</NavLink>
           <NavLink to="/contact" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>Contact</NavLink>
         </nav>
@@ -105,6 +110,7 @@ const Header = () => {
             { to: "/about", label: "About" },
             { to: "/services", label: "Services" },
             { to: "/studio", label: "The Studio" },
+            { to: "/team", label: "The Team" },
             { to: "/timetable", label: "Timetable" },
             { to: "/contact", label: "Contact" },
           ].map((l) => (
