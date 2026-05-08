@@ -40,9 +40,8 @@ const Header = () => {
       )}
     >
       <div className="container-x flex items-center justify-between h-20">
-        <Link to="/" className="flex flex-col leading-none">
-          <span className="font-serif text-xl tracking-tight">Guardians</span>
-          <span className="eyebrow text-[0.6rem] mt-0.5">Studio · NW3</span>
+        <Link to="/" className="flex items-center" aria-label="Guardians Studios">
+          <img src={logo} alt="Guardians Studios" className="h-12 md:h-14 w-auto object-contain" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9 text-[0.78rem] uppercase tracking-[0.18em] font-medium">
