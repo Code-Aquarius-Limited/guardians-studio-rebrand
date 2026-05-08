@@ -3,11 +3,9 @@ import PageHero, { FinalCta } from "@/components/PageHero";
 import hero from "@/assets/hero.jpg";
 import studio from "@/assets/studio.jpg";
 
-const team = [
-  { name: "Alex Carter", role: "Head of Coaching", spec: "Strength & longevity" },
-  { name: "Mara Lin", role: "Lead Pilates Instructor", spec: "Reformer · pre & post natal" },
-  { name: "Daniel Reyes", role: "Physiotherapist", spec: "Sports rehab & manual therapy" },
-  { name: "Iris Bennett", role: "Yoga & Mobility", spec: "Vinyasa, breath, mobility" },
+const founders = [
+  { name: "Sam Jeal", role: "Founder" },
+  { name: "Neil Hagerty", role: "Founder" },
 ];
 
 const About = () => {
@@ -47,19 +45,32 @@ const About = () => {
       </section>
 
       <section className="container-x py-24 md:py-36">
-        <div className="flex items-end justify-between mb-14">
-          <div>
-            <p className="eyebrow">The Team</p>
-            <h2 className="display text-4xl md:text-5xl mt-6">Meet the <span className="italic-accent">Guardians</span>.</h2>
+        <div className="mb-14 max-w-3xl">
+          <p className="eyebrow">The Founders</p>
+          <h2 className="display text-4xl md:text-5xl mt-6">Meet the <span className="italic-accent">Founders</span>.</h2>
+          <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/80">
+            <p>
+              Sam and Neil met in 2012, working side by side at the same personal training company. A shared
+              philosophy — and a stubborn belief in the long game — turned a friendship into a partnership.
+            </p>
+            <p>
+              Their first business, Guardians PT, opened over eight years ago. More than 85% of those original
+              clients still train with them today. For Sam and Neil, coaching has always been a long-term
+              commitment — a journey shared with the people who walk through the door.
+            </p>
+            <p>
+              Guardians Studio is the next chapter: a space where considered personal training meets the
+              energy of a community, with a hand-picked team of coaches and therapists who share the same
+              standards.
+            </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
-          {team.map((m) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
+          {founders.map((m) => (
             <article key={m.name} className="bg-background p-8 md:p-10">
-              <div className="aspect-[4/5] bg-surface-deep mb-6" />
+              <div className="aspect-[4/5] bg-surface-deep mb-6 rounded-3xl" />
               <p className="eyebrow">{m.role}</p>
               <h3 className="font-serif text-3xl mt-3">{m.name}</h3>
-              <p className="text-sm text-muted-foreground mt-2">{m.spec}</p>
             </article>
           ))}
         </div>
