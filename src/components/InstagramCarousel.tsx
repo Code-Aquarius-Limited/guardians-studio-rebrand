@@ -55,7 +55,7 @@ const InstagramCarousel = () => {
                 className="pl-4 md:pl-6 basis-4/5 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
               >
                 <a href="https://www.instagram.com/guardiansstudios/" target="_blank" rel="noopener noreferrer" className="group block">
-                  <div className="relative aspect-square overflow-hidden bg-background">
+                  <div className="relative aspect-square overflow-hidden rounded-2xl bg-background">
                     <img
                       src={p.img}
                       alt={p.caption}

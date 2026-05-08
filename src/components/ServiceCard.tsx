@@ -16,7 +16,7 @@ const ServiceCard = ({ eyebrow, title, to, image, description, className, aspect
   const aspectClass = aspect === "tall" ? "aspect-[4/5]" : aspect === "wide" ? "aspect-[16/10]" : "aspect-square";
   return (
     <Link to={to} className={cn("group block", className)}>
-      <div className={cn("relative overflow-hidden bg-surface", aspectClass)}>
+      <div className={cn("relative overflow-hidden rounded-3xl bg-surface", aspectClass)}>
         <img
           src={image}
           alt={title}
