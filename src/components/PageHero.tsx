@@ -17,7 +17,7 @@ const PageHero = ({
   return (
     <section className="relative pt-20">
       <div className="container-x">
-        <div className="relative h-[60vh] min-h-[440px] overflow-hidden rounded-3xl">
+        <div className="relative h-[60vh] min-h-[440px] overflow-hidden">
           <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover" />
         </div>
         <div className="pt-10 md:pt-14 max-w-4xl">
