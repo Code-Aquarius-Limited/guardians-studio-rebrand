@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import SiteLayout from "@/components/layout/SiteLayout";
-import ServiceCard from "@/components/ServiceCard";
+import HomeServicesCarousel from "@/components/HomeServicesCarousel";
 import { FinalCta } from "@/components/PageHero";
 import InstagramCarousel from "@/components/InstagramCarousel";
 import hero from "@/assets/hero.jpg";
-import pt from "@/assets/pt.jpg";
-import pilates from "@/assets/pilates.jpg";
-import yoga from "@/assets/yoga.jpg";
 import recovery from "@/assets/recovery.jpg";
-import physio from "@/assets/physio.jpg";
 import studio from "@/assets/studio.jpg";
 
 const pillars = [
@@ -86,28 +82,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="bg-surface py-24 md:py-36">
-        <div className="container-x">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-            <div className="max-w-2xl">
-              <p className="eyebrow">Services</p>
-              <h2 className="display text-4xl md:text-6xl mt-6">Tailored to <span className="italic-accent">how</span> you move.</h2>
-            </div>
-            <Link to="/services" className="inline-flex items-center gap-2 text-[0.72rem] uppercase tracking-[0.22em] link-underline self-start md:self-end">
-              All services <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6">
-            <ServiceCard eyebrow="01" title="Personal Training" to="/services/personal-training" image={pt} description="One-to-one coaching, programmed for the long term." className="md:col-span-3" aspect="wide" />
-            <ServiceCard eyebrow="02" title="Pilates" to="/services/pilates" image={pilates} description="Reformer, mat and 1:1 pilates." className="md:col-span-3" aspect="wide" />
-            <ServiceCard eyebrow="03" title="Yoga" to="/services/yoga" image={yoga} className="md:col-span-2" />
-            <ServiceCard eyebrow="04" title="Recovery" to="/services/recovery" image={recovery} className="md:col-span-2" />
-            <ServiceCard eyebrow="05" title="Physio & Massage" to="/services/physiotherapy" image={physio} className="md:col-span-2" />
-          </div>
-        </div>
-      </section>
+      {/* SERVICES CAROUSEL */}
+      <HomeServicesCarousel />
 
       {/* RECOVERY */}
       <section className="container-x py-24 md:py-36">

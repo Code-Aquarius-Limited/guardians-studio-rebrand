@@ -11,12 +11,17 @@ import Timetable from "./pages/Timetable.tsx";
 import Contact from "./pages/Contact.tsx";
 import {
   PersonalTraining,
-  Pilates,
+  Pilates11,
+  ReformerPilates,
+  MatPilates,
+  PrePostNatalPilates,
   Yoga,
-  Recovery,
+  Massage,
   Physiotherapy,
-  PrePostNatal,
+  RedLightSauna,
+  ColdPlunge,
 } from "./pages/services/index.tsx";
+import Team from "./pages/Team.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -32,11 +37,16 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/personal-training" element={<PersonalTraining />} />
-          <Route path="/services/pilates" element={<Pilates />} />
+          <Route path="/services/pilates-1-1" element={<Pilates11 />} />
+          <Route path="/services/reformer-pilates" element={<ReformerPilates />} />
+          <Route path="/services/mat-pilates" element={<MatPilates />} />
+          <Route path="/services/pre-post-natal-pilates" element={<PrePostNatalPilates />} />
           <Route path="/services/yoga" element={<Yoga />} />
-          <Route path="/services/recovery" element={<Recovery />} />
+          <Route path="/services/massage" element={<Massage />} />
           <Route path="/services/physiotherapy" element={<Physiotherapy />} />
-          <Route path="/services/pre-post-natal" element={<PrePostNatal />} />
+          <Route path="/services/red-light-sauna" element={<RedLightSauna />} />
+          <Route path="/services/cold-plunge" element={<ColdPlunge />} />
+          <Route path="/team" element={<Team />} />
           <Route path="/studio" element={<Studio />} />
           <Route path="/timetable" element={<Timetable />} />
           <Route path="/contact" element={<Contact />} />
