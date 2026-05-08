@@ -35,10 +35,10 @@ const Index = () => {
             Longevity, performance <span className="italic-accent">&amp; recovery</span> — redefined.
           </h1>
           <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <Link to="/timetable" className="inline-flex items-center gap-3 bg-background text-foreground px-7 py-4 text-[0.72rem] uppercase tracking-[0.22em] hover:bg-background/90 transition">
+            <Link to="/timetable" className="inline-flex items-center gap-3 bg-background text-foreground px-7 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-background/90 transition">
               Book a Session <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link to="/services" className="inline-flex items-center gap-3 border border-background/50 text-background px-7 py-4 text-[0.72rem] uppercase tracking-[0.22em] hover:bg-background/10 transition">
+            <Link to="/services" className="inline-flex items-center gap-3 border border-background/50 text-background px-7 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-background/10 transition">
               Explore Services <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -89,7 +89,7 @@ const Index = () => {
       <section className="container-x py-24 md:py-36">
         <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
           <div className="md:col-span-6">
-            <div className="aspect-[4/5] overflow-hidden bg-surface">
+            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-surface">
               <img src={recovery} alt="Recovery suite" loading="lazy" className="h-full w-full object-cover" />
             </div>
           </div>
@@ -138,7 +138,7 @@ const Index = () => {
             </Link>
           </div>
           <div className="md:col-span-7">
-            <div className="aspect-[16/10] overflow-hidden">
+            <div className="aspect-[16/10] overflow-hidden rounded-3xl">
               <img src={studio} alt="Guardians Studio interior" loading="lazy" className="h-full w-full object-cover" />
             </div>
           </div>

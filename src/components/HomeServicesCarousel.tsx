@@ -36,7 +36,7 @@ const HomeServicesCarousel = () => {
                 className="pl-4 md:pl-6 basis-[85%] sm:basis-1/2 lg:basis-[40%] xl:basis-[34%]"
               >
                 <Link to={`/services/${s.slug}`} className="group block">
-                  <div className="relative aspect-[3/4] overflow-hidden bg-background">
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-3xl bg-background">
                     <img
                       src={s.image}
                       alt={s.title}

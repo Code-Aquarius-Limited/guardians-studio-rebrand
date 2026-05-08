@@ -61,7 +61,7 @@ const Header = () => {
                 servicesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
               )}
             >
-              <div className="bg-background border border-border shadow-[var(--shadow-lift)] min-w-[260px] py-2">
+              <div className="bg-background border border-border shadow-[var(--shadow-lift)] min-w-[260px] py-2 rounded-2xl overflow-hidden">
                 {services.map((s) => (
                   <Link
                     key={s.to}
@@ -83,7 +83,7 @@ const Header = () => {
         <div className="flex items-center gap-3">
           <Link
             to="/timetable"
-            className="hidden md:inline-flex items-center text-[0.72rem] uppercase tracking-[0.2em] bg-foreground text-background px-5 py-3 hover:bg-foreground/85 transition-colors"
+            className="hidden md:inline-flex items-center text-[0.72rem] uppercase tracking-[0.2em] bg-foreground text-background px-6 py-3 rounded-full hover:bg-foreground/85 transition-colors"
           >
             Book Now
           </Link>

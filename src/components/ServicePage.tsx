@@ -28,15 +28,15 @@ const ServicePage = (p: ServicePageProps) => (
           </h1>
           <p className="mt-8 text-lg leading-relaxed text-foreground/80 max-w-lg">{p.intro}</p>
           <div className="mt-10 flex gap-3 flex-wrap">
-            <Link to="/timetable" className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-4 text-[0.72rem] uppercase tracking-[0.22em] hover:bg-foreground/85 transition">
+            <Link to="/timetable" className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-foreground/85 transition">
               Book <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 border border-foreground/20 px-6 py-4 text-[0.72rem] uppercase tracking-[0.22em] hover:bg-surface-deep transition">
+            <Link to="/contact" className="inline-flex items-center gap-2 border border-foreground/20 px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-surface-deep transition">
               Enquire <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
-        <div className="md:col-span-6 relative min-h-[360px]">
+        <div className="md:col-span-6 relative min-h-[360px] overflow-hidden rounded-3xl">
           <img src={p.hero} alt={p.title} className="absolute inset-0 h-full w-full object-cover" />
         </div>
       </div>
@@ -104,7 +104,7 @@ const ServicePage = (p: ServicePageProps) => (
         <div className="mt-12 grid md:grid-cols-3 gap-5">
           {p.related.map((r) => (
             <Link key={r.to} to={r.to} className="group block">
-              <div className="aspect-[4/5] overflow-hidden bg-background">
+              <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-background">
                 <img src={r.image} alt={r.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
               <p className="font-serif text-2xl mt-4 flex items-center justify-between">

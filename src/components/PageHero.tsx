@@ -16,7 +16,7 @@ const PageHero = ({
 }) => {
   return (
     <section className="relative pt-20">
-      <div className="relative h-[60vh] min-h-[440px] overflow-hidden">
+      <div className="relative h-[60vh] min-h-[440px] overflow-hidden rounded-b-[2rem] md:rounded-b-[3rem]">
         <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-background/30" />
       </div>
@@ -36,7 +36,7 @@ const PageHero = ({
 
 export const FinalCta = () => (
   <section className="container-x py-24 md:py-36">
-    <div className="bg-foreground text-background p-10 md:p-20">
+    <div className="bg-foreground text-background p-10 md:p-20 rounded-3xl">
       <div className="grid md:grid-cols-12 gap-10 items-end">
         <div className="md:col-span-8">
           <p className="eyebrow !text-background/60">Begin</p>
@@ -45,10 +45,10 @@ export const FinalCta = () => (
           </h2>
         </div>
         <div className="md:col-span-4 flex flex-col gap-3 md:items-end">
-          <Link to="/timetable" className="inline-flex items-center justify-between gap-6 bg-background text-foreground px-6 py-4 text-[0.72rem] uppercase tracking-[0.22em] hover:bg-background/90 transition w-full md:w-auto">
+          <Link to="/timetable" className="inline-flex items-center justify-between gap-6 bg-background text-foreground px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-background/90 transition w-full md:w-auto">
             Book Now <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link to="/contact" className="inline-flex items-center justify-between gap-6 border border-background/30 px-6 py-4 text-[0.72rem] uppercase tracking-[0.22em] hover:bg-background/10 transition w-full md:w-auto">
+          <Link to="/contact" className="inline-flex items-center justify-between gap-6 border border-background/30 px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-background/10 transition w-full md:w-auto">
             Enquire <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
