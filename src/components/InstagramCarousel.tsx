@@ -6,24 +6,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import pt from "@/assets/pt.jpg";
-import pilates from "@/assets/pilates.jpg";
-import yoga from "@/assets/yoga.jpg";
-import recovery from "@/assets/recovery.jpg";
-import physio from "@/assets/physio.jpg";
-import studio from "@/assets/studio.jpg";
-import prenatal from "@/assets/prenatal.jpg";
-import hero from "@/assets/hero.jpg";
+import insta1 from "@/assets/insta-1.jpg";
+import insta2 from "@/assets/insta-2.jpg";
+import insta3 from "@/assets/insta-3.jpg";
+import insta4 from "@/assets/insta-4.jpg";
+import insta5 from "@/assets/insta-5.jpg";
 
 const posts = [
-  { img: pt, caption: "Strength is a long game. 1:1 sessions on the floor today.", likes: 412 },
-  { img: pilates, caption: "Reformer flow — control, breath, repeat.", likes: 538 },
-  { img: yoga, caption: "Sunday slow flow with Anya. Booking open.", likes: 327 },
-  { img: recovery, caption: "Heat. Cold. Stillness. The recovery ritual.", likes: 624 },
-  { img: physio, caption: "Sports massage with the team this week.", likes: 289 },
-  { img: studio, caption: "The Bakery, Fleet Road — north light at its best.", likes: 712 },
-  { img: prenatal, caption: "Pre & post natal classes — for every stage.", likes: 401 },
-  { img: hero, caption: "Welcome in. NW3.", likes: 855 },
+  { img: insta1, caption: "Strength is a long game. 1:1 sessions on the floor today.", likes: 412 },
+  { img: insta2, caption: "Assessment first — coaching built around how you move.", likes: 538 },
+  { img: insta3, caption: "Conditioning on the Assault bike. Honest work.", likes: 327 },
+  { img: insta4, caption: "Group session energy — small, considered, in motion.", likes: 624 },
+  { img: insta5, caption: "Hands-on coaching cues, every rep.", likes: 289 },
 ];
 
 const InstagramCarousel = () => {
