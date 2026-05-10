@@ -67,9 +67,10 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {founders.map((m) => (
-            <article key={m.name} className="bg-background p-8 md:p-10">
+            <article key={m.name} className="bg-background">
+
               <div className="aspect-[4/5] bg-surface-deep mb-6 rounded-3xl overflow-hidden">
                 {m.photo && (
                   <img src={m.photo} alt={m.name} loading="lazy" className="h-full w-full object-cover" />
