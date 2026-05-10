@@ -67,17 +67,18 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 max-w-5xl">
           {founders.map((m) => (
-            <article key={m.name} className="bg-background">
-
-              <div className="aspect-[4/5] bg-surface-deep mb-6 rounded-3xl overflow-hidden">
+            <article key={m.name} className="flex items-center gap-6">
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-surface-deep rounded-2xl overflow-hidden">
                 {m.photo && (
                   <img src={m.photo} alt={m.name} loading="lazy" className="h-full w-full object-cover object-top" />
                 )}
               </div>
-              <p className="eyebrow">{m.role}</p>
-              <h3 className="font-serif text-3xl mt-3">{m.name}</h3>
+              <div>
+                <p className="eyebrow">{m.role}</p>
+                <h3 className="font-serif text-2xl md:text-3xl mt-2">{m.name}</h3>
+              </div>
             </article>
           ))}
         </div>
