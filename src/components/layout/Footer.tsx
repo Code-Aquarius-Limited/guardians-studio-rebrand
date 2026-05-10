@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="md:col-span-5">
             <Link to="/" className="block">
               <p className="font-serif text-4xl leading-none">Guardians Studios</p>
-              <p className="eyebrow mt-2">Studio · North West London</p>
+              <p className="eyebrow mt-2">NW3 · North West London</p>
             </Link>
             <p className="mt-8 max-w-md text-muted-foreground leading-relaxed">
               A premium fitness, recovery and wellbeing studio in the heart of NW3.
