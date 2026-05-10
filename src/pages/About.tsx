@@ -1,6 +1,6 @@
 import SiteLayout from "@/components/layout/SiteLayout";
 import PageHero, { FinalCta } from "@/components/PageHero";
-import hero from "@/assets/hero.jpg";
+import hero from "@/assets/hero-about.jpg";
 import studio from "@/assets/studio.jpg";
 
 const founders = [

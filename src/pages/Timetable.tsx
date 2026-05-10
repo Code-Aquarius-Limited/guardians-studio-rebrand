@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SiteLayout from "@/components/layout/SiteLayout";
 import PageHero, { FinalCta } from "@/components/PageHero";
-import hero from "@/assets/hero.jpg";
+import hero from "@/assets/hero-timetable.jpg";
 import { cn } from "@/lib/utils";
 
 const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
