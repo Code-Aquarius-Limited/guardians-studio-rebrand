@@ -71,7 +71,7 @@ export const ReformerPilates = () => (
     eyebrow="Reformer Pilates"
     title="Reformer Pilates in"
     italic="NW3."
-    hero={pilates}
+    hero={reformer}
     intro="Spring-loaded strength, control and precision — small group reformer classes with senior instructors."
     what="Our reformer programme is built around precision and progression. Small classes, senior teaching and a careful eye on technique — whatever your starting point."
     benefits={["Core strength & control", "Posture & alignment", "Mobility & joint health", "Long-term resilience"]}
