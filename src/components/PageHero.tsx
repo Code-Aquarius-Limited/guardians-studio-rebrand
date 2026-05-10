@@ -16,10 +16,10 @@ const PageHero = ({
 }) => {
   return (
     <section className="relative pt-20">
+      <div className="relative h-[60vh] min-h-[440px] overflow-hidden">
+        <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      </div>
       <div className="container-x">
-        <div className="relative h-[60vh] min-h-[440px] overflow-hidden">
-          <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover" />
-        </div>
         <div className="pt-10 md:pt-14 max-w-4xl">
           <p className="eyebrow">{eyebrow}</p>
           <h1 className="display text-5xl md:text-7xl lg:text-8xl mt-6">
