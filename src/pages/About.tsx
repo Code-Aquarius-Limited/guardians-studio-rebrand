@@ -3,10 +3,11 @@ import PageHero, { FinalCta } from "@/components/PageHero";
 import hero from "@/assets/hero-about.jpg";
 import studio from "@/assets/studio.jpg";
 import samJeal from "@/assets/sam-jeal.jpg";
+import neilHagerty from "@/assets/neil-hagerty.jpg";
 
 const founders: { name: string; role: string; photo?: string }[] = [
   { name: "Sam Jeal", role: "Founder", photo: samJeal },
-  { name: "Neil Hagerty", role: "Founder" },
+  { name: "Neil Hagerty", role: "Founder", photo: neilHagerty },
 ];
 
 const About = () => {
