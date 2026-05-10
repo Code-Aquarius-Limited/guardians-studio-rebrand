@@ -34,7 +34,7 @@ const About = () => {
 
       <section className="bg-surface py-24 md:py-36">
         <div className="container-x grid md:grid-cols-2 gap-12 items-center">
-          <img src={studio} loading="lazy" className="aspect-[4/3] w-full object-cover" alt="The studio" />
+          <img src={studio} loading="lazy" className="aspect-[4/3] w-full object-cover rounded-3xl" alt="The studio" />
           <div>
             <p className="eyebrow">Our Approach</p>
             <h2 className="display text-4xl md:text-5xl mt-6">Coaching and recovery, <span className="italic-accent">together</span>.</h2>
