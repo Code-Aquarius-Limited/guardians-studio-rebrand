@@ -6,6 +6,7 @@ import reformer from "@/assets/reformer.jpg";
 import recovery from "@/assets/recovery.jpg";
 import physio from "@/assets/physio.jpg";
 import physiotherapy from "@/assets/physiotherapy.jpg";
+import coldPlunge from "@/assets/cold-plunge.jpg";
 import yoga from "@/assets/yoga.jpg";
 import prenatal from "@/assets/prenatal.jpg";
 
@@ -19,7 +20,7 @@ export const allServices = [
   { slug: "massage", title: "Massage", image: physio, description: "Sports and deep tissue massage with our therapists." },
   { slug: "physiotherapy", title: "Physiotherapy", image: physiotherapy, description: "Assessment, rehab and clinical care." },
   { slug: "red-light-sauna", title: "Red Light Sauna", image: recovery, description: "Heat, light and stillness for circulation and repair." },
-  { slug: "cold-plunge", title: "Cold Plunge Therapy", image: recovery, description: "A daily ritual for recovery, focus and resilience." },
+  { slug: "cold-plunge", title: "Cold Plunge Therapy", image: coldPlunge, description: "A daily ritual for recovery, focus and resilience." },
 ];
 
 const related = (slugs: string[]) =>
@@ -186,7 +187,7 @@ export const RedLightSauna = () => (
     eyebrow="Red Light Sauna"
     title="Heat, light"
     italic="& stillness."
-    hero={recovery}
+    hero={coldPlunge}
     intro="Red light sauna sessions — for circulation, repair and a moment of stillness in the day."
     what="Our red light sauna combines targeted infrared and visible red light with traditional heat — supporting circulation, skin and recovery, in a calm private setting."
     benefits={["Circulation & repair", "Skin & cellular health", "Sleep quality", "Nervous system regulation"]}
