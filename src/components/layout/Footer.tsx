@@ -19,7 +19,7 @@ const Footer = () => {
 
           <div className="md:col-span-3">
             <p className="eyebrow mb-5">Visit</p>
-            <address className="not-italic text-sm leading-7 text-foreground/80">
+            <address className="not-italic text-sm leading-7 text-background">
               The Bakery<br />
               Fleet Road<br />
               Hampstead, NW3<br />
