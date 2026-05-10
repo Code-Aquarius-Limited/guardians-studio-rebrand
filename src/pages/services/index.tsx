@@ -2,6 +2,7 @@ import ServicePage from "@/components/ServicePage";
 import pt from "@/assets/pt.jpg";
 import pilates from "@/assets/pilates.jpg";
 import pilatesLight from "@/assets/pilates-light.jpg";
+import reformer from "@/assets/reformer.jpg";
 import recovery from "@/assets/recovery.jpg";
 import physio from "@/assets/physio.jpg";
 import yoga from "@/assets/yoga.jpg";
@@ -10,7 +11,7 @@ import prenatal from "@/assets/prenatal.jpg";
 export const allServices = [
   { slug: "personal-training", title: "Personal Training", image: pt, description: "One-to-one coaching, programmed for the long term." },
   { slug: "pilates-1-1", title: "Pilates 1:1", image: pilates, description: "Private sessions with senior pilates instructors." },
-  { slug: "reformer-pilates", title: "Reformer Pilates", image: pilates, description: "Spring-loaded strength, control and precision." },
+  { slug: "reformer-pilates", title: "Reformer Pilates", image: reformer, description: "Spring-loaded strength, control and precision." },
   { slug: "mat-pilates", title: "Mat Pilates", image: pilates, description: "Classical mat work for strength and mobility." },
   { slug: "pre-post-natal-pilates", title: "Pre & Post Natal Pilates", image: prenatal, description: "Specialist pilates through every trimester." },
   { slug: "yoga", title: "Yoga", image: yoga, description: "Vinyasa, slow flow and mobility-led classes." },
@@ -70,7 +71,7 @@ export const ReformerPilates = () => (
     eyebrow="Reformer Pilates"
     title="Reformer Pilates in"
     italic="NW3."
-    hero={pilates}
+    hero={reformer}
     intro="Spring-loaded strength, control and precision — small group reformer classes with senior instructors."
     what="Our reformer programme is built around precision and progression. Small classes, senior teaching and a careful eye on technique — whatever your starting point."
     benefits={["Core strength & control", "Posture & alignment", "Mobility & joint health", "Long-term resilience"]}
