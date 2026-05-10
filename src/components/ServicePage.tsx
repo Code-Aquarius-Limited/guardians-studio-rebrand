@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import SiteLayout from "@/components/layout/SiteLayout";
-import { FinalCta } from "@/components/PageHero";
 
 export interface ServicePageProps {
   eyebrow: string;
@@ -116,7 +115,6 @@ const ServicePage = (p: ServicePageProps) => (
       </div>
     </section>
 
-    <FinalCta />
   </SiteLayout>
 );
 
