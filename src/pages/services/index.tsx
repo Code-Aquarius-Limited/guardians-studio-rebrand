@@ -5,6 +5,7 @@ import pilatesLight from "@/assets/pilates-light.jpg";
 import reformer from "@/assets/reformer.jpg";
 import recovery from "@/assets/recovery.jpg";
 import physio from "@/assets/physio.jpg";
+import physiotherapy from "@/assets/physiotherapy.jpg";
 import yoga from "@/assets/yoga.jpg";
 import prenatal from "@/assets/prenatal.jpg";
 
@@ -16,7 +17,7 @@ export const allServices = [
   { slug: "pre-post-natal-pilates", title: "Pre & Post Natal Pilates", image: prenatal, description: "Specialist pilates through every trimester." },
   { slug: "yoga", title: "Yoga", image: yoga, description: "Vinyasa, slow flow and mobility-led classes." },
   { slug: "massage", title: "Massage", image: physio, description: "Sports and deep tissue massage with our therapists." },
-  { slug: "physiotherapy", title: "Physiotherapy", image: physio, description: "Assessment, rehab and clinical care." },
+  { slug: "physiotherapy", title: "Physiotherapy", image: physiotherapy, description: "Assessment, rehab and clinical care." },
   { slug: "red-light-sauna", title: "Red Light Sauna", image: recovery, description: "Heat, light and stillness for circulation and repair." },
   { slug: "cold-plunge", title: "Cold Plunge Therapy", image: recovery, description: "A daily ritual for recovery, focus and resilience." },
 ];
@@ -166,7 +167,7 @@ export const Physiotherapy = () => (
     eyebrow="Physiotherapy"
     title="Assessment, rehab"
     italic="& clinical care."
-    hero={physio}
+    hero={physiotherapy}
     intro="Hands-on therapy with senior physiotherapists — for injury recovery, prevention and performance."
     what="Whether you're recovering from injury or want to keep training without one, our physio team integrates assessment, manual therapy and rehab programming with your coach."
     benefits={["Injury recovery", "Pain reduction", "Performance support", "Long-term resilience"]}
