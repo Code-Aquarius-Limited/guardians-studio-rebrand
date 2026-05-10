@@ -2,9 +2,10 @@ import SiteLayout from "@/components/layout/SiteLayout";
 import PageHero, { FinalCta } from "@/components/PageHero";
 import hero from "@/assets/hero-about.jpg";
 import studio from "@/assets/studio.jpg";
+import samJeal from "@/assets/sam-jeal.jpg";
 
-const founders = [
-  { name: "Sam Jeal", role: "Founder" },
+const founders: { name: string; role: string; photo?: string }[] = [
+  { name: "Sam Jeal", role: "Founder", photo: samJeal },
   { name: "Neil Hagerty", role: "Founder" },
 ];
 
@@ -68,7 +69,11 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
           {founders.map((m) => (
             <article key={m.name} className="bg-background p-8 md:p-10">
-              <div className="aspect-[4/5] bg-surface-deep mb-6 rounded-3xl" />
+              <div className="aspect-[4/5] bg-surface-deep mb-6 rounded-3xl overflow-hidden">
+                {m.photo && (
+                  <img src={m.photo} alt={m.name} loading="lazy" className="h-full w-full object-cover" />
+                )}
+              </div>
               <p className="eyebrow">{m.role}</p>
               <h3 className="font-serif text-3xl mt-3">{m.name}</h3>
             </article>
