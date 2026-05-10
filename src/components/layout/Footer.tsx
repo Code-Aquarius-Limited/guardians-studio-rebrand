@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <Link to="/" className="block">
-              <p className="font-serif text-4xl leading-none">Guardians</p>
+              <p className="font-serif text-4xl leading-none">Guardians Studios</p>
               <p className="eyebrow mt-2">Studio · North West London</p>
             </Link>
             <p className="mt-8 max-w-md text-muted-foreground leading-relaxed">
