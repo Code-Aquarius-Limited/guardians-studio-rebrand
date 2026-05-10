@@ -1,6 +1,6 @@
 import SiteLayout from "@/components/layout/SiteLayout";
 import PageHero, { FinalCta } from "@/components/PageHero";
-import hero from "@/assets/hero.jpg";
+import hero from "@/assets/hero-team.jpg";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 type Member = { name: string; role: string; photo?: string };

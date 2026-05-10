@@ -1,7 +1,7 @@
 import SiteLayout from "@/components/layout/SiteLayout";
 import PageHero, { FinalCta } from "@/components/PageHero";
 import ServiceCard from "@/components/ServiceCard";
-import hero from "@/assets/hero.jpg";
+import hero from "@/assets/hero-services.jpg";
 import { allServices } from "./services/index";
 
 const Services = () => (

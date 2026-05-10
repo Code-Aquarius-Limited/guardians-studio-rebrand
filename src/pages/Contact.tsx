@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SiteLayout from "@/components/layout/SiteLayout";
 import PageHero from "@/components/PageHero";
-import studio from "@/assets/studio.jpg";
+import studio from "@/assets/hero-contact.jpg";
 import { toast } from "sonner";
 
 const Contact = () => {
