@@ -20,7 +20,7 @@ export const allServices = [
   { slug: "massage", title: "Massage", image: physio, description: "Sports and deep tissue massage with our therapists." },
   { slug: "physiotherapy", title: "Physiotherapy", image: physiotherapy, description: "Assessment, rehab and clinical care." },
   { slug: "red-light-sauna", title: "Red Light Sauna", image: recovery, description: "Heat, light and stillness for circulation and repair." },
-  { slug: "cold-plunge", title: "Cold Plunge Therapy", image: recovery, description: "A daily ritual for recovery, focus and resilience." },
+  { slug: "cold-plunge", title: "Cold Plunge Therapy", image: coldPlunge, description: "A daily ritual for recovery, focus and resilience." },
 ];
 
 const related = (slugs: string[]) =>
