@@ -73,7 +73,7 @@ const About = () => {
 
               <div className="aspect-[4/5] bg-surface-deep mb-6 rounded-3xl overflow-hidden">
                 {m.photo && (
-                  <img src={m.photo} alt={m.name} loading="lazy" className="h-full w-full object-cover" />
+                  <img src={m.photo} alt={m.name} loading="lazy" className="h-full w-full object-cover object-top" />
                 )}
               </div>
               <p className="eyebrow">{m.role}</p>
