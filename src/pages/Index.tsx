@@ -7,12 +7,16 @@ import InstagramCarousel from "@/components/InstagramCarousel";
 import hero from "@/assets/hero.jpg";
 import recovery from "@/assets/recovery.jpg";
 import studio from "@/assets/studio.jpg";
+import pillarLongevity from "@/assets/pillar-longevity.jpg";
+import pillarPerformance from "@/assets/pillar-performance.jpg";
+import pillarRecovery from "@/assets/pillar-recovery.jpg";
+import pillarCommunity from "@/assets/pillar-community.jpg";
 
 const pillars = [
-  { n: "01", t: "Longevity", d: "Train for the decades ahead, not just the season." },
-  { n: "02", t: "Performance", d: "Coaching designed around how you move and live." },
-  { n: "03", t: "Recovery", d: "Sauna, cold plunge and hands-on therapy, integrated." },
-  { n: "04", t: "Community", d: "A small, considered space — built around its members." },
+  { n: "01", t: "Longevity", d: "Train for the decades ahead, not just the season.", img: pillarLongevity },
+  { n: "02", t: "Performance", d: "Coaching designed around how you move and live.", img: pillarPerformance },
+  { n: "03", t: "Recovery", d: "Sauna, cold plunge and hands-on therapy, integrated.", img: pillarRecovery },
+  { n: "04", t: "Community", d: "A small, considered space — built around its members.", img: pillarCommunity },
 ];
 
 const testimonials = [
@@ -71,12 +75,24 @@ const Index = () => {
         </div>
 
         {/* Pillars */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+        <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {pillars.map((p) => (
-            <div key={p.n} className="bg-background p-8 md:p-10 hover:bg-surface transition-colors duration-500">
-              <p className="eyebrow">{p.n}</p>
-              <h3 className="font-serif text-3xl mt-6">{p.t}</h3>
-              <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{p.d}</p>
+            <div
+              key={p.n}
+              className="group relative aspect-square overflow-hidden rounded-3xl bg-foreground"
+            >
+              <img
+                src={p.img}
+                alt={p.t}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-foreground/40" />
+              <div className="absolute inset-0 flex items-center justify-center p-4">
+                <h3 className="text-background text-sm md:text-base lg:text-lg uppercase tracking-[0.25em] font-medium text-center">
+                  {p.t}
+                </h3>
+              </div>
             </div>
           ))}
         </div>
