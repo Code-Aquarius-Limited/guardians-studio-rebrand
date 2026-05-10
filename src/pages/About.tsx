@@ -70,7 +70,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 max-w-5xl">
           {founders.map((m) => (
             <article key={m.name} className="flex items-center gap-6">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-surface-deep rounded-2xl overflow-hidden">
+              <div className="w-64 h-64 md:w-80 md:h-80 shrink-0 bg-surface-deep rounded-2xl overflow-hidden">
                 {m.photo && (
                   <img src={m.photo} alt={m.name} loading="lazy" className="h-full w-full object-cover object-top" />
                 )}
