@@ -1,6 +1,7 @@
 import ServicePage from "@/components/ServicePage";
 import pt from "@/assets/pt.jpg";
 import pilates from "@/assets/pilates.jpg";
+import pilatesLight from "@/assets/pilates-light.jpg";
 import recovery from "@/assets/recovery.jpg";
 import physio from "@/assets/physio.jpg";
 import yoga from "@/assets/yoga.jpg";
@@ -50,7 +51,7 @@ export const Pilates11 = () => (
     eyebrow="Pilates 1:1"
     title="Private pilates,"
     italic="programmed."
-    hero={pilates}
+    hero={pilatesLight}
     intro="One-to-one pilates with a senior instructor — fully tailored to your body, goals and history."
     what="Pilates 1:1 is the most direct route into the practice. You'll work with the same instructor each week, on reformer or mat, with a programme built and refined entirely around you."
     benefits={["Fully tailored programming", "Faster progression", "Rehab-friendly", "Deep technical coaching"]}
