@@ -207,7 +207,7 @@ export const ColdPlunge = () => (
     eyebrow="Cold Plunge Therapy"
     title="Cold plunge,"
     italic="daily ritual."
-    hero={recovery}
+    hero={coldPlunge}
     intro="A guided cold plunge practice — for recovery, focus and resilience."
     what="The plunge is short, sharp and transformative. We support each session with breathwork and protocol guidance — so the work is safe, intentional and repeatable."
     benefits={["Recovery & repair", "Mood & focus", "Stress resilience", "A daily reset"]}
