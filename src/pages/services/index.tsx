@@ -7,6 +7,7 @@ import recovery from "@/assets/recovery.jpg";
 import physio from "@/assets/physio.jpg";
 import physiotherapy from "@/assets/physiotherapy.jpg";
 import coldPlunge from "@/assets/cold-plunge.jpg";
+import redLightSauna from "@/assets/red-light-sauna.jpg";
 import yoga from "@/assets/yoga.jpg";
 import prenatal from "@/assets/prenatal.jpg";
 
@@ -187,7 +188,7 @@ export const RedLightSauna = () => (
     eyebrow="Red Light Sauna"
     title="Heat, light"
     italic="& stillness."
-    hero={coldPlunge}
+    hero={redLightSauna}
     intro="Red light sauna sessions — for circulation, repair and a moment of stillness in the day."
     what="Our red light sauna combines targeted infrared and visible red light with traditional heat — supporting circulation, skin and recovery, in a calm private setting."
     benefits={["Circulation & repair", "Skin & cellular health", "Sleep quality", "Nervous system regulation"]}
