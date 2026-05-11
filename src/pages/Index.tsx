@@ -120,19 +120,21 @@ const Index = () => {
             </p>
             <ul className="mt-10 divide-y divide-border border-y border-border">
               {[
-                ["Red Light Sauna", "Heat, light and stillness for circulation and repair."],
-                ["Cold Plunge", "A daily ritual for recovery, focus and resilience."],
-                ["Physiotherapy", "Assessment, rehab and sports massage with our team."],
-              ].map(([t, d]) => (
-                <li key={t} className="py-5 flex justify-between items-baseline gap-6">
-                  <span className="font-serif text-2xl">{t}</span>
-                  <span className="text-sm text-muted-foreground text-right max-w-xs">{d}</span>
+                ["Red Light Sauna", "Heat, light and stillness for circulation and repair.", "/services/red-light-sauna"],
+                ["Cold Plunge", "A daily ritual for recovery, focus and resilience.", "/services/cold-plunge"],
+                ["Physiotherapy", "Assessment, rehab and sports massage with our team.", "/services/physiotherapy"],
+              ].map(([t, d, to]) => (
+                <li key={t}>
+                  <Link to={to} className="py-5 flex justify-between items-center gap-6 group">
+                    <span className="font-serif text-2xl">{t}</span>
+                    <span className="flex items-center gap-3 text-sm text-muted-foreground text-right max-w-xs">
+                      {d}
+                      <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </Link>
                 </li>
               ))}
             </ul>
-            <Link to="/services/recovery" className="inline-flex items-center gap-2 mt-10 text-[0.72rem] uppercase tracking-[0.22em] link-underline">
-              Discover Recovery <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
         </div>
       </section>
