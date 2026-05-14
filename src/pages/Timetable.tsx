@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import SiteLayout from "@/components/layout/SiteLayout";
 import PageHero, { FinalCta } from "@/components/PageHero";
 import hero from "@/assets/hero-timetable.jpg";
