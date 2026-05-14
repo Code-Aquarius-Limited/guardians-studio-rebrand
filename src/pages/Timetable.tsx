@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import SiteLayout from "@/components/layout/SiteLayout";
 import PageHero, { FinalCta } from "@/components/PageHero";
 import hero from "@/assets/hero-timetable.jpg";
@@ -50,6 +50,32 @@ const Timetable = () => {
   const [day, setDay] = useState("Mon");
   const [filter, setFilter] = useState("All");
   const list = schedule[day].filter((c) => filter === "All" || c.type === filter);
+  const iframeContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleMessage = (e: MessageEvent) => {
+      const data = e.data;
+      const height = data?.height;
+      const type = data?.type;
+      const iframe = document.getElementById("lf-iframe-697cd6ad745d15a2ddc8c6a8") as HTMLIFrameElement | null;
+      const container = iframeContainerRef.current;
+      
+      if (container && data?.branding && !document.querySelector(".lf-injected")) {
+        container.insertAdjacentHTML('beforeend', data.branding);
+      }
+      
+      if (!type || !type.match("lf-iframe-697cd6ad745d15a2ddc8c6a8") || typeof height !== 'number' || !iframe) {
+        return;
+      }
+      
+      Object.entries(data).forEach(([key, value]) => {
+        (iframe as any)[key] = value;
+      });
+    };
+
+    window.addEventListener("message", handleMessage, false);
+    return () => window.removeEventListener("message", handleMessage, false);
+  }, []);
 
   return (
     <SiteLayout>
@@ -112,6 +138,27 @@ const Timetable = () => {
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* LegitFit timetable embed */}
+      <section className="container-x py-16 md:py-24 border-t border-border">
+        <div className="max-w-3xl mx-auto">
+          <div 
+            id="lf-iframe-container-697cd6ad745d15a2ddc8c6a8" 
+            ref={iframeContainerRef}
+            className="w-full border border-border rounded overflow-hidden"
+          >
+            <iframe 
+              src="https://www.legitfit.com/p/timetable/697cd6ad745d15a2ddc8c6a8?isIframe=true" 
+              title="Schedule for Guardians Studios" 
+              width="100%" 
+              height="800" 
+              style={{ border: 'none', display: 'block' }}
+              scrolling="no" 
+              id="lf-iframe-697cd6ad745d15a2ddc8c6a8" 
+            />
+          </div>
+        </div>
       </section>
 
       <FinalCta />
