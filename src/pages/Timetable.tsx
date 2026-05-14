@@ -78,6 +78,31 @@ const Timetable = () => {
     return () => window.removeEventListener("message", handleMessage, false);
   }, []);
 
+  useEffect(() => {
+    const handleMessage = (e: MessageEvent) => {
+      const data = e.data;
+      const height = data?.height;
+      const type = data?.type;
+      const iframe = document.getElementById("lf-appointments-iframe-697cd6ad745d15a2ddc8c6a8") as HTMLIFrameElement | null;
+      const container = appointmentsContainerRef.current;
+      
+      if (container && data?.branding && !document.querySelector(".lf-injected")) {
+        container.insertAdjacentHTML('beforeend', data.branding);
+      }
+      
+      if (!type || !type.match("lf-appointments-iframe-697cd6ad745d15a2ddc8c6a8") || typeof height !== 'number' || !iframe) {
+        return;
+      }
+      
+      Object.entries(data).forEach(([key, value]) => {
+        (iframe as any)[key] = value;
+      });
+    };
+
+    window.addEventListener("message", handleMessage, false);
+    return () => window.removeEventListener("message", handleMessage, false);
+  }, []);
+
   return (
     <SiteLayout>
       <PageHero
