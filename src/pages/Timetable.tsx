@@ -51,6 +51,7 @@ const Timetable = () => {
   const [filter, setFilter] = useState("All");
   const list = schedule[day].filter((c) => filter === "All" || c.type === filter);
   const iframeContainerRef = useRef<HTMLDivElement>(null);
+  const appointmentsContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleMessage = (e: MessageEvent) => {
