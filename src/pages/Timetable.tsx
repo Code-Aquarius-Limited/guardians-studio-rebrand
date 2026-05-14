@@ -140,6 +140,27 @@ const Timetable = () => {
         </ul>
       </section>
 
+      {/* LegitFit timetable embed */}
+      <section className="container-x py-16 md:py-24 border-t border-border">
+        <div className="max-w-3xl mx-auto">
+          <div 
+            id="lf-iframe-container-697cd6ad745d15a2ddc8c6a8" 
+            ref={iframeContainerRef}
+            className="w-full border border-border rounded overflow-hidden"
+          >
+            <iframe 
+              src="https://www.legitfit.com/p/timetable/697cd6ad745d15a2ddc8c6a8?isIframe=true" 
+              title="Schedule for Guardians Studios" 
+              width="100%" 
+              height="800" 
+              style={{ border: 'none', display: 'block' }}
+              scrolling="no" 
+              id="lf-iframe-697cd6ad745d15a2ddc8c6a8" 
+            />
+          </div>
+        </div>
+      </section>
+
       <FinalCta />
     </SiteLayout>
   );
