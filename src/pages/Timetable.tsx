@@ -60,15 +60,15 @@ const Timetable = () => {
       const type = data?.type;
       const iframe = document.getElementById("lf-iframe-697cd6ad745d15a2ddc8c6a8") as HTMLIFrameElement | null;
       const container = iframeContainerRef.current;
-      
+
       if (container && data?.branding && !document.querySelector(".lf-injected")) {
-        container.insertAdjacentHTML('beforeend', data.branding);
+        container.insertAdjacentHTML("beforeend", data.branding);
       }
-      
-      if (!type || !type.match("lf-iframe-697cd6ad745d15a2ddc8c6a8") || typeof height !== 'number' || !iframe) {
+
+      if (!type || !type.match("lf-iframe-697cd6ad745d15a2ddc8c6a8") || typeof height !== "number" || !iframe) {
         return;
       }
-      
+
       Object.entries(data).forEach(([key, value]) => {
         (iframe as any)[key] = value;
       });
@@ -83,17 +83,24 @@ const Timetable = () => {
       const data = e.data;
       const height = data?.height;
       const type = data?.type;
-      const iframe = document.getElementById("lf-appointments-iframe-697cd6ad745d15a2ddc8c6a8") as HTMLIFrameElement | null;
+      const iframe = document.getElementById(
+        "lf-appointments-iframe-697cd6ad745d15a2ddc8c6a8",
+      ) as HTMLIFrameElement | null;
       const container = appointmentsContainerRef.current;
-      
+
       if (container && data?.branding && !document.querySelector(".lf-injected")) {
-        container.insertAdjacentHTML('beforeend', data.branding);
+        container.insertAdjacentHTML("beforeend", data.branding);
       }
-      
-      if (!type || !type.match("lf-appointments-iframe-697cd6ad745d15a2ddc8c6a8") || typeof height !== 'number' || !iframe) {
+
+      if (
+        !type ||
+        !type.match("lf-appointments-iframe-697cd6ad745d15a2ddc8c6a8") ||
+        typeof height !== "number" ||
+        !iframe
+      ) {
         return;
       }
-      
+
       Object.entries(data).forEach(([key, value]) => {
         (iframe as any)[key] = value;
       });
@@ -123,9 +130,11 @@ const Timetable = () => {
               onClick={() => setFilter(f)}
               className={cn(
                 "px-4 py-2 text-[0.72rem] uppercase tracking-[0.18em] border transition-colors",
-                filter === f ? "bg-foreground text-background border-foreground" : "border-border hover:bg-surface"
+                filter === f ? "bg-foreground text-background border-foreground" : "border-border hover:bg-surface",
               )}
-            >{f}</button>
+            >
+              {f}
+            </button>
           ))}
         </div>
 
@@ -137,9 +146,11 @@ const Timetable = () => {
               onClick={() => setDay(d)}
               className={cn(
                 "py-4 text-[0.72rem] uppercase tracking-[0.2em] border-r last:border-r-0 border-border transition-colors",
-                day === d ? "bg-foreground text-background" : "bg-background hover:bg-surface"
+                day === d ? "bg-foreground text-background" : "bg-background hover:bg-surface",
               )}
-            >{d}</button>
+            >
+              {d}
+            </button>
           ))}
         </div>
 
@@ -168,39 +179,39 @@ const Timetable = () => {
 
       {/* LegitFit timetable embed */}
       <section className="container-x py-16 md:py-24 border-t border-border">
-        <div 
-          id="lf-iframe-container-697cd6ad745d15a2ddc8c6a8" 
+        <div
+          id="lf-iframe-container-697cd6ad745d15a2ddc8c6a8"
           ref={iframeContainerRef}
           className="border border-border rounded overflow-hidden mx-auto"
-          style={{ maxWidth: '1000px' }}
+          style={{ maxWidth: "1440px" }}
         >
-          <iframe 
-            src="https://legitfit.com/p/timetable/697cd6ad745d15a2ddc8c6a8?isIframe=true" 
-            title="Schedule for Guardians Studios" 
-            width="100%" 
-            height="800" 
-            style={{ border: 'none', display: 'block' }}
-            scrolling="no" 
-            id="lf-iframe-697cd6ad745d15a2ddc8c6a8" 
+          <iframe
+            src="https://www.legitfit.com/p/timetable/697cd6ad745d15a2ddc8c6a8?isIframe=true"
+            title="Schedule for Guardians Studios"
+            width="100%"
+            height="800"
+            style={{ border: "none", display: "block" }}
+            scrolling="no"
+            id="lf-iframe-697cd6ad745d15a2ddc8c6a8"
           />
         </div>
       </section>
 
       {/* LegitFit appointments embed */}
       <section className="container-x py-16 md:py-24 border-t border-border">
-        <div 
-          id="lf-appointments-iframe-container-697cd6ad745d15a2ddc8c6a8" 
+        <div
+          id="lf-appointments-iframe-container-697cd6ad745d15a2ddc8c6a8"
           ref={appointmentsContainerRef}
           className="w-full border border-border rounded overflow-hidden"
         >
-          <iframe 
-            src="https://www.legitfit.com/p/appointments/select/697cd6ad745d15a2ddc8c6a8?isIframe=true" 
-            title="Schedule for Guardians Studios" 
-            width="100%" 
-            height="800" 
-            style={{ border: 'none', display: 'block' }}
-            scrolling="no" 
-            id="lf-appointments-iframe-697cd6ad745d15a2ddc8c6a8" 
+          <iframe
+            src="https://www.legitfit.com/p/appointments/select/697cd6ad745d15a2ddc8c6a8?isIframe=true"
+            title="Schedule for Guardians Studios"
+            width="100%"
+            height="800"
+            style={{ border: "none", display: "block" }}
+            scrolling="no"
+            id="lf-appointments-iframe-697cd6ad745d15a2ddc8c6a8"
           />
         </div>
       </section>
