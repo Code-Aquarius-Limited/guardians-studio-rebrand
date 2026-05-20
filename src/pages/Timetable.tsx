@@ -188,7 +188,7 @@ const Timetable = () => {
           <iframe
             src="https://www.legitfit.com/p/timetable/697cd6ad745d15a2ddc8c6a8?isIframe=true"
             title="Schedule for Guardians Studios"
-            width="100%"
+            width="1440px"
             height="800"
             style={{ border: "none", display: "block" }}
             scrolling="no"
