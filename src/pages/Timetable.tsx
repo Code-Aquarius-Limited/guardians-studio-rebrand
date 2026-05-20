@@ -171,7 +171,8 @@ const Timetable = () => {
         <div 
           id="lf-iframe-container-697cd6ad745d15a2ddc8c6a8" 
           ref={iframeContainerRef}
-          className="w-full border border-border rounded overflow-hidden"
+          className="border border-border rounded overflow-hidden mx-auto"
+          style={{ maxWidth: '1000px' }}
         >
           <iframe 
             src="https://www.legitfit.com/p/timetable/697cd6ad745d15a2ddc8c6a8?isIframe=true" 
