@@ -2,6 +2,7 @@ import SiteLayout from "@/components/layout/SiteLayout";
 import PageHero, { FinalCta } from "@/components/PageHero";
 import hero from "@/assets/hero-team.jpg";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useState } from "react";
 import {
   Dialog,
   DialogContent,
