@@ -86,7 +86,10 @@ const initials = (name: string) =>
     .join("")
     .toUpperCase();
 
-const Team = () => (
+const Team = () => {
+  const [selected, setSelected] = useState<Member | null>(null);
+
+  return (
   <SiteLayout>
     <PageHero
       eyebrow="The Team"
@@ -109,10 +112,15 @@ const Team = () => (
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-            {g.members.map((m) => (
+            {g.members.map((m) => {
+              const hasBio = !!bios[m.name];
+              return (
               <article
                 key={m.name + m.role}
-                className="group border border-border bg-card overflow-hidden flex flex-col"
+                onClick={() => hasBio && setSelected(m)}
+                className={`group border border-border bg-card overflow-hidden flex flex-col ${
+                  hasBio ? "cursor-pointer transition-colors hover:border-foreground/40" : ""
+                }`}
               >
                 <div className="aspect-[3/4] bg-muted overflow-hidden">
                   <Avatar className="h-full w-full rounded-none">
@@ -127,14 +135,30 @@ const Team = () => (
                   <h3 className="font-serif text-xl md:text-2xl mt-2">{m.name}</h3>
                 </div>
               </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       ))}
     </section>
 
+    <Dialog open={!!selected} onOpenChange={(open) => !open && setSelected(null)}>
+      <DialogContent className="max-w-2xl">
+        <DialogHeader>
+          <DialogTitle className="font-serif text-2xl md:text-3xl">
+            {selected?.name}
+          </DialogTitle>
+          <p className="eyebrow text-xs">{selected?.role}</p>
+        </DialogHeader>
+        <DialogDescription className="text-base leading-relaxed text-muted-foreground">
+          {selected ? bios[selected.name] : ""}
+        </DialogDescription>
+      </DialogContent>
+    </Dialog>
+
     <FinalCta />
   </SiteLayout>
-);
+  );
+};
 
 export default Team;
