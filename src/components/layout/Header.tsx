@@ -2,7 +2,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/wings-logo.png.asset.json";
 
 const services = [
   { label: "Personal Training", to: "/services/personal-training" },
@@ -41,7 +41,7 @@ const Header = () => {
     >
       <div className="container-x flex items-center justify-between h-20">
         <Link to="/" className="flex items-center" aria-label="Guardians Studios">
-          <img src={logo} alt="Guardians Studios" className="h-12 md:h-14 w-auto object-contain" />
+          <img src={logoAsset.url} alt="Guardians Studios" className="h-12 md:h-14 w-auto object-contain" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9 text-[0.78rem] uppercase tracking-[0.18em] font-medium">
