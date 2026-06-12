@@ -161,7 +161,7 @@ const Pricing = () => {
               <tr className="border-b border-border">
                 <th className="text-left py-4 pr-4 font-normal eyebrow">Feature</th>
                 {tiers.map((t) => (
-                  <th key={t.label} className="py-4 px-4 text-center">
+                  <th key={t.label} className={cn("py-4 px-4 text-center", t.tableTint)}>
                     <span className="block font-serif text-xl">{t.label}</span>
                     <span className="block text-muted-foreground text-xs mt-1">{t.price} / mo</span>
                   </th>
@@ -173,7 +173,7 @@ const Pricing = () => {
                 <tr key={row.label} className="border-b border-border">
                   <td className="py-4 pr-4 font-medium">{row.label}</td>
                   {row.values.map((v, i) => (
-                    <td key={i} className="py-4 px-4 text-center text-muted-foreground">{v}</td>
+                    <td key={i} className={cn("py-4 px-4 text-center text-muted-foreground", tiers[i].tableTint)}>{v}</td>
                   ))}
                 </tr>
               ))}
