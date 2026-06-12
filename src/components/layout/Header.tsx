@@ -76,6 +76,7 @@ const Header = () => {
           <NavLink to="/studio" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>The Studio</NavLink>
           <NavLink to="/team" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>The Team</NavLink>
           <NavLink to="/timetable" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>Timetable</NavLink>
+          <NavLink to="/pricing" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>Pricing</NavLink>
           <NavLink to="/contact" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>Contact</NavLink>
         </nav>
 
