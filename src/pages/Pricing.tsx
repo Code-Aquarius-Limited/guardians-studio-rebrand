@@ -113,7 +113,7 @@ const Pricing = () => {
                 "flex flex-col p-8 rounded-3xl border",
                 t.featured
                   ? "bg-foreground text-background border-foreground"
-                  : "bg-background border-border",
+                  : t.tint || "bg-background border-border",
               )}
             >
               <p className={cn("eyebrow", t.featured && "!text-background/60")}>{t.label}</p>
