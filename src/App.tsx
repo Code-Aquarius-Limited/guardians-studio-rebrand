@@ -8,6 +8,7 @@ import About from "./pages/About.tsx";
 import Services from "./pages/Services.tsx";
 import Studio from "./pages/Studio.tsx";
 import Timetable from "./pages/Timetable.tsx";
+import Pricing from "./pages/Pricing.tsx";
 import Contact from "./pages/Contact.tsx";
 import {
   PersonalTraining,
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/team" element={<Team />} />
           <Route path="/studio" element={<Studio />} />
           <Route path="/timetable" element={<Timetable />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

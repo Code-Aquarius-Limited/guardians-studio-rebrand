@@ -45,7 +45,6 @@ const Header = () => {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9 text-[0.78rem] uppercase tracking-[0.18em] font-medium">
-          <NavLink to="/" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>Home</NavLink>
           <NavLink to="/about" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>About</NavLink>
           <div
             className="relative"
@@ -77,6 +76,7 @@ const Header = () => {
           <NavLink to="/studio" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>The Studio</NavLink>
           <NavLink to="/team" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>The Team</NavLink>
           <NavLink to="/timetable" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>Timetable</NavLink>
+          <NavLink to="/pricing" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>Pricing</NavLink>
           <NavLink to="/contact" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>Contact</NavLink>
         </nav>
 
@@ -106,12 +106,12 @@ const Header = () => {
       >
         <div className="container-x py-6 flex flex-col gap-1">
           {[
-            { to: "/", label: "Home" },
             { to: "/about", label: "About" },
             { to: "/services", label: "Services" },
             { to: "/studio", label: "The Studio" },
             { to: "/team", label: "The Team" },
             { to: "/timetable", label: "Timetable" },
+            { to: "/pricing", label: "Pricing" },
             { to: "/contact", label: "Contact" },
           ].map((l) => (
             <Link key={l.to} to={l.to} className="py-3 font-serif text-2xl border-b border-border">
