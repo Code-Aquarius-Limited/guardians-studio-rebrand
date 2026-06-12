@@ -106,12 +106,12 @@ const Header = () => {
       >
         <div className="container-x py-6 flex flex-col gap-1">
           {[
-            { to: "/", label: "Home" },
             { to: "/about", label: "About" },
             { to: "/services", label: "Services" },
             { to: "/studio", label: "The Studio" },
             { to: "/team", label: "The Team" },
             { to: "/timetable", label: "Timetable" },
+            { to: "/pricing", label: "Pricing" },
             { to: "/contact", label: "Contact" },
           ].map((l) => (
             <Link key={l.to} to={l.to} className="py-3 font-serif text-2xl border-b border-border">
