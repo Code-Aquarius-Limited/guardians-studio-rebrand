@@ -45,7 +45,6 @@ const Header = () => {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9 text-[0.78rem] uppercase tracking-[0.18em] font-medium">
-          <NavLink to="/" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>Home</NavLink>
           <NavLink to="/about" className={({ isActive }) => cn("link-underline", isActive && "opacity-60")}>About</NavLink>
           <div
             className="relative"
