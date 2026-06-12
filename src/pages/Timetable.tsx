@@ -1,55 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import SiteLayout from "@/components/layout/SiteLayout";
 import PageHero, { FinalCta } from "@/components/PageHero";
 import hero from "@/assets/hero-timetable.jpg";
-import { cn } from "@/lib/utils";
-
-const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-const filters = ["All", "Pilates", "Yoga", "Strength", "Recovery"];
-
-const schedule: Record<string, { time: string; class: string; coach: string; type: string }[]> = {
-  Mon: [
-    { time: "06:30", class: "Reformer Pilates", coach: "Kate Read", type: "Pilates" },
-    { time: "08:00", class: "Strength & Conditioning", coach: "Sam Jeal", type: "Strength" },
-    { time: "12:30", class: "Slow Flow Yoga", coach: "Merci Cope", type: "Yoga" },
-    { time: "18:00", class: "Mat Pilates", coach: "Verity Wright", type: "Pilates" },
-    { time: "19:30", class: "Recovery Ritual", coach: "Martina Xuerab", type: "Recovery" },
-  ],
-  Tue: [
-    { time: "07:00", class: "Vinyasa Yoga", coach: "Tom Sutton", type: "Yoga" },
-    { time: "09:00", class: "Reformer Pilates", coach: "Deniz Kotan", type: "Pilates" },
-    { time: "17:30", class: "Strength Circuit", coach: "Neil Hagerty", type: "Strength" },
-  ],
-  Wed: [
-    { time: "06:30", class: "Mat Pilates", coach: "Kandace Smith", type: "Pilates" },
-    { time: "12:00", class: "Mobility & Breath", coach: "Merci Cope", type: "Yoga" },
-    { time: "18:30", class: "Reformer Pilates", coach: "Kate Read", type: "Pilates" },
-  ],
-  Thu: [
-    { time: "07:00", class: "Strength & Conditioning", coach: "Joe West", type: "Strength" },
-    { time: "10:00", class: "Pre & Post Natal Pilates", coach: "Verity Wright", type: "Pilates" },
-    { time: "19:00", class: "Slow Flow Yoga", coach: "Tom Sutton", type: "Yoga" },
-  ],
-  Fri: [
-    { time: "06:30", class: "Reformer Pilates", coach: "Deniz Kotan", type: "Pilates" },
-    { time: "12:30", class: "Recovery Ritual", coach: "Martina Xuerab", type: "Recovery" },
-    { time: "17:30", class: "Strength Circuit", coach: "Dan Sharrock", type: "Strength" },
-  ],
-  Sat: [
-    { time: "08:00", class: "Vinyasa Yoga", coach: "Merci Cope", type: "Yoga" },
-    { time: "09:30", class: "Reformer Pilates", coach: "Kandace Smith", type: "Pilates" },
-    { time: "11:00", class: "Strength & Conditioning", coach: "Blair Robertson", type: "Strength" },
-  ],
-  Sun: [
-    { time: "09:00", class: "Slow Flow Yoga", coach: "Tom Sutton", type: "Yoga" },
-    { time: "10:30", class: "Recovery Ritual", coach: "Martina Xuerab", type: "Recovery" },
-  ],
-};
 
 const Timetable = () => {
-  const [day, setDay] = useState("Mon");
-  const [filter, setFilter] = useState("All");
-  const list = schedule[day].filter((c) => filter === "All" || c.type === filter);
   const appointmentsContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
