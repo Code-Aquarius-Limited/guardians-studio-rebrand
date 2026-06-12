@@ -8,6 +8,7 @@ import About from "./pages/About.tsx";
 import Services from "./pages/Services.tsx";
 import Studio from "./pages/Studio.tsx";
 import Timetable from "./pages/Timetable.tsx";
+import Pricing from "./pages/Pricing.tsx";
 import Contact from "./pages/Contact.tsx";
 import {
   PersonalTraining,
