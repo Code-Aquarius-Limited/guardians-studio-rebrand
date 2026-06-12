@@ -48,63 +48,6 @@ const Timetable = () => {
         image={hero}
       />
 
-      <section className="container-x py-16 md:py-24">
-        {/* Filters */}
-        <div className="flex flex-wrap items-center gap-2 mb-8">
-          <span className="eyebrow mr-2">Filter</span>
-          {filters.map((f) => (
-            <button
-              key={f}
-              onClick={() => setFilter(f)}
-              className={cn(
-                "px-4 py-2 text-[0.72rem] uppercase tracking-[0.18em] border transition-colors",
-                filter === f ? "bg-foreground text-background border-foreground" : "border-border hover:bg-surface",
-              )}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
-
-        {/* Days */}
-        <div className="grid grid-cols-7 border border-border">
-          {days.map((d) => (
-            <button
-              key={d}
-              onClick={() => setDay(d)}
-              className={cn(
-                "py-4 text-[0.72rem] uppercase tracking-[0.2em] border-r last:border-r-0 border-border transition-colors",
-                day === d ? "bg-foreground text-background" : "bg-background hover:bg-surface",
-              )}
-            >
-              {d}
-            </button>
-          ))}
-        </div>
-
-        {/* Schedule */}
-        <ul className="mt-8 divide-y divide-border border-y border-border">
-          {list.length === 0 && (
-            <li className="py-10 text-center text-muted-foreground">No classes match this filter.</li>
-          )}
-          {list.map((c, i) => (
-            <li key={i} className="grid grid-cols-12 gap-4 py-6 items-center">
-              <div className="col-span-3 md:col-span-2 font-serif text-3xl">{c.time}</div>
-              <div className="col-span-9 md:col-span-5">
-                <p className="font-serif text-2xl">{c.class}</p>
-                <p className="eyebrow mt-1">{c.type}</p>
-              </div>
-              <div className="col-span-7 md:col-span-3 text-sm text-muted-foreground">{c.coach}</div>
-              <div className="col-span-5 md:col-span-2 text-right">
-                <button className="text-[0.72rem] uppercase tracking-[0.2em] border border-foreground/20 px-4 py-2.5 hover:bg-foreground hover:text-background transition-colors">
-                  Book
-                </button>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
-
       {/* LegitFit appointments embed */}
       <section className="container-x py-16 md:py-24 border-t border-border">
         <div
