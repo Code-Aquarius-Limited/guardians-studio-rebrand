@@ -11,6 +11,8 @@ const tiers = [
     label: "Base",
     price: "£35",
     blurb: "Core amenities & services to get you moving.",
+    tint: "bg-[hsl(35,30%,97%)] border-[hsl(35,25%,92%)]",
+    tableTint: "bg-[hsl(35,30%,98%)]",
     features: [
       "Gym entry",
       "Custom profile on the Guardians app",
@@ -25,6 +27,8 @@ const tiers = [
     label: "Bronze",
     price: "£80",
     blurb: "Base Membership plus one weekly add-on of your choice.",
+    tint: "bg-[hsl(25,35%,96.5%)] border-[hsl(25,30%,90%)]",
+    tableTint: "bg-[hsl(25,35%,98%)]",
     features: [
       "All core amenities & services",
       "1 × Sauna / Plunge Pool OR 1 × Class per week",
@@ -36,6 +40,8 @@ const tiers = [
     label: "Silver",
     price: "£135",
     blurb: "Base Membership with both weekly add-ons and priority booking.",
+    tint: "bg-[hsl(210,20%,97%)] border-[hsl(210,18%,91%)]",
+    tableTint: "bg-[hsl(210,20%,98.5%)]",
     features: [
       "All core amenities & services",
       "1 × Sauna / Plunge Pool PLUS 1 × Class per week",
@@ -62,6 +68,8 @@ const tiers = [
     label: "Platinum",
     price: "£275",
     blurb: "Our complete membership with unlimited recovery access.",
+    tint: "bg-[hsl(260,15%,97.5%)] border-[hsl(260,12%,91%)]",
+    tableTint: "bg-[hsl(260,15%,98.5%)]",
     features: [
       "All core amenities & services",
       "Unlimited Sauna / Plunge Pool (once daily, via app)",
