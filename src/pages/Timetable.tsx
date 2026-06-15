@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import SiteLayout from "@/components/layout/SiteLayout";
-import PageHero, { FinalCta } from "@/components/PageHero";
+import PageHero from "@/components/PageHero";
 import hero from "@/assets/hero-timetable.jpg";
 
 const Timetable = () => {
@@ -67,7 +67,7 @@ const Timetable = () => {
         </div>
       </section>
 
-      <FinalCta />
+      
     </SiteLayout>
   );
 };
