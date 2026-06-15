@@ -60,8 +60,7 @@ const Timetable = () => {
             title="Schedule for Guardians Studios"
             width="100%"
             height="800"
-            style={{ border: "none", display: "block" }}
-            scrolling="no"
+            style={{ border: "none", display: "block", overflow: "hidden" }}
             id="lf-appointments-iframe-697cd6ad745d15a2ddc8c6a8"
           />
         </div>
