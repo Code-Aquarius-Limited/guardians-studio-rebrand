@@ -36,7 +36,7 @@ const PageHero = ({
 export const FinalCta = () => (
   <section className="container-x py-24 md:py-36">
     <div className="bg-foreground text-background p-10 md:p-20 rounded-3xl">
-      <div className="grid md:grid-cols-12 gap-10 items-end">
+      <div className="grid md:grid-cols-12 gap-10 items-center">
         <div className="md:col-span-8">
           <p className="eyebrow !text-background/60">Begin</p>
           <h2 className="display text-5xl md:text-7xl mt-5">
