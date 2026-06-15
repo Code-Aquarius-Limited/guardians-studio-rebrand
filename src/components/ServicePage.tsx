@@ -99,7 +99,7 @@ const ServicePage = (p: ServicePageProps) => (
     </section>
 
     {/* Related */}
-    <section className="bg-surface py-24 md:py-32">
+    <section className="bg-surface py-24 md:py-36">
       <div className="container-x">
         <p className="eyebrow">Related</p>
         <h2 className="display text-4xl md:text-5xl mt-6">Continue <span className="italic-accent">exploring</span>.</h2>
