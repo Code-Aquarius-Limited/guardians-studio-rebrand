@@ -49,7 +49,7 @@ const Timetable = () => {
       />
 
       {/* LegitFit appointments embed */}
-      <section className="container-x py-16 md:py-24">
+      <section className="container-x py-24 md:py-36">
         <div
           id="lf-appointments-iframe-container-697cd6ad745d15a2ddc8c6a8"
           ref={appointmentsContainerRef}

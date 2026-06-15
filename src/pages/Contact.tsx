@@ -22,7 +22,7 @@ const Contact = () => {
         image={studio}
       />
 
-      <section className="container-x py-24 md:py-32 grid md:grid-cols-12 gap-10 md:gap-16">
+      <section className="container-x py-24 md:py-36 grid md:grid-cols-12 gap-10 md:gap-16">
         <div className="md:col-span-5 space-y-10">
           <div>
             <p className="eyebrow">Address</p>
