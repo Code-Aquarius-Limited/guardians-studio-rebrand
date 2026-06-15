@@ -47,6 +47,9 @@ export const FinalCta = () => (
           <Link to="/timetable" className="inline-flex items-center justify-between gap-6 bg-background text-foreground px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-background/90 transition w-full md:w-auto">
             Book Now <ArrowRight className="h-4 w-4" />
           </Link>
+          <Link to="/pricing" className="inline-flex items-center justify-between gap-6 bg-background/10 text-background px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-background/20 transition w-full md:w-auto">
+            Pricing <ArrowRight className="h-4 w-4" />
+          </Link>
           <Link to="/contact" className="inline-flex items-center justify-between gap-6 border border-background/30 px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-background/10 transition w-full md:w-auto">
             Enquire <ArrowRight className="h-4 w-4" />
           </Link>
