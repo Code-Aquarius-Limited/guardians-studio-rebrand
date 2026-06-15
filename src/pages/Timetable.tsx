@@ -44,7 +44,7 @@ const Timetable = () => {
         eyebrow="Timetable"
         title="Classes &"
         italic="bookings."
-        intro="Browse the week, filter by discipline, and book your spot. 1:1 sessions can be requested via the contact page."
+        intro="Browse the week and book your spot. 1:1 sessions can be requested via the contact page."
         image={hero}
       />
 
