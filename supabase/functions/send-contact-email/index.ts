@@ -66,8 +66,8 @@ Deno.serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'Guardians Studio <onboarding@resend.dev>',
-        to: ['hello@guardiansstudio.co.uk'],
+        from: 'Guardians Studio <noreply@guardians-studios.com>',
+        to: ['hello@guardians-studios.com'],
         reply_to: email,
         subject: `New enquiry from ${name}`,
         html,
