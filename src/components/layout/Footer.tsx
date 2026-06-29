@@ -49,7 +49,7 @@ const Footer = () => {
 
         <div className="hairline mt-16 pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-muted-foreground tracking-wide">
           <p>© {new Date().getFullYear()} Guardians Studio. All rights reserved.</p>
-          <p className="eyebrow">Longevity · Performance · Recovery</p>
+          <p className="eyebrow">Performance · Recovery · Longevity</p>
         </div>
       </div>
     </footer>
