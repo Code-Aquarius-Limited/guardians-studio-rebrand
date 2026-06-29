@@ -36,7 +36,7 @@ const Index = () => {
         <div className="relative h-full container-x flex flex-col justify-end pb-24 md:pb-28">
           <p className="eyebrow !text-background/80 mb-6">Hampstead · NW3</p>
           <h1 className="display text-background text-[3.25rem] sm:text-7xl md:text-8xl lg:text-[8.5rem] max-w-[18ch]">
-            Longevity, performance <span className="italic-accent">&amp; recovery</span> — redefined.
+            Performance, recovery <span className="italic-accent">&amp; longevity</span> — redefined.
           </h1>
           <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Link to="/timetable" className="inline-flex items-center gap-3 bg-background text-foreground px-7 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-background/90 transition">
