@@ -28,7 +28,7 @@ const About = () => {
         </div>
         <div className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-foreground/80">
           <p>We don't believe in punishment, hacks or before-and-afters. We believe in considered work, returned to often, in good company.</p>
-          <p>Our coaching is rooted in longevity — strength that lasts, mobility you can rely on, and recovery that lets you keep showing up.</p>
+          <p>Our coaching is rooted in longevity — strength that lasts, mobility you can rely on, and recovery that lets you keep showing up. Our team brings more than 15 years of experience coaching at leading fitness companies, and that depth shapes everything we do.</p>
         </div>
       </section>
 
