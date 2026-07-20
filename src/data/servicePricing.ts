@@ -102,4 +102,16 @@ export const servicePricing: Record<string, ServicePricing[]> = {
       ],
     },
   ],
+  "small-group-pt": [
+    {
+      title: "Group Training",
+      eyebrow: "Up to 6 Persons",
+      rows: [
+        { label: "Single", price: "£35" },
+        { label: "5 Session Pack", price: "£150" },
+        { label: "10 Session Pack", price: "£275" },
+        { label: "25 Session Pack", price: "£495" },
+      ],
+    },
+  ],
 };
