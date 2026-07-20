@@ -10,7 +10,7 @@ const tiers = [
     name: "Foundation",
     label: "Tier 01",
     price: "£35",
-    blurb: "Core amenities & services to get you moving. Required for all Personal Training clients.",
+    
     description: {
       heading: "Why a Foundation membership",
       body: [
@@ -35,7 +35,7 @@ const tiers = [
     name: "Bronze",
     label: "Tier 02",
     price: "£80",
-    blurb: "Base Membership plus one class per week.",
+    
     tint: "bg-[hsl(25,35%,96.5%)] border-[hsl(25,30%,90%)]",
     tableTint: "bg-[hsl(25,35%,98%)]",
     includes: ["Base Membership — all core amenities"],
@@ -48,7 +48,7 @@ const tiers = [
     name: "Silver",
     label: "Tier 03",
     price: "£135",
-    blurb: "Base Membership with weekly classes, priority booking and guest access.",
+    
     tint: "bg-[hsl(210,20%,97%)] border-[hsl(210,18%,91%)]",
     tableTint: "bg-[hsl(210,20%,98.5%)]",
     includes: ["Base Membership — all core amenities"],
@@ -65,7 +65,7 @@ const tiers = [
     label: "Tier 04",
     price: "£225",
     featured: true,
-    blurb: "More classes, weekly wellness and member discounts.",
+    
     includes: ["Base Membership — all core amenities"],
     benefits: [
       "Up to 3 × Classes per week",
@@ -79,7 +79,7 @@ const tiers = [
     name: "Platinum",
     label: "Tier 05",
     price: "£275",
-    blurb: "Our complete membership with unlimited classes and recovery.",
+    
     tint: "bg-[hsl(260,15%,97.5%)] border-[hsl(260,12%,91%)]",
     tableTint: "bg-[hsl(260,15%,98.5%)]",
     includes: ["Base Membership — all core amenities"],
@@ -136,9 +136,6 @@ const Pricing = () => {
                   / month
                 </span>
               </div>
-              <p className={cn("mt-4 text-sm leading-relaxed", t.featured ? "text-background/80" : "text-muted-foreground")}>
-                {t.blurb}
-              </p>
               {t.description && (
                 <div className={cn("mt-5", t.featured ? "text-background/80" : "text-muted-foreground")}>
                   <p className={cn("eyebrow text-xs", t.featured && "!text-background/60")}>{t.description.heading}</p>
