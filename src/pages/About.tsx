@@ -17,7 +17,7 @@ const About = () => {
         eyebrow="About"
         title="A studio built around"
         italic="people."
-        intro="Guardians Studio was founded on a simple idea: training, recovery and care belong together. We are a small team of coaches, therapists and instructors building a space we'd want to train in for the rest of our lives."
+        intro="Guardians Studios was founded on a simple idea: training, recovery and care belong together. We are a small team of coaches, therapists and instructors building a space we'd want to train in for the rest of our lives."
         image={hero}
       />
 
@@ -61,7 +61,7 @@ const About = () => {
               commitment — a journey shared with the people who walk through the door.
             </p>
             <p>
-              Guardians Studio is the next chapter: a space where considered personal training meets the
+              Guardians Studios is the next chapter: a space where considered personal training meets the
               energy of a community, with a hand-picked team of coaches and therapists who share the same
               standards.
             </p>
