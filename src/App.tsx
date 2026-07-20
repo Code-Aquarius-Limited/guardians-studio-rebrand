@@ -21,6 +21,8 @@ import {
   Physiotherapy,
   RedLightSauna,
   ColdPlunge,
+  SmallGroupPT,
+  KidsLiftClub,
 } from "./pages/services/index.tsx";
 import Team from "./pages/Team.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -38,6 +40,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/personal-training" element={<PersonalTraining />} />
+          <Route path="/services/small-group-pt" element={<SmallGroupPT />} />
           <Route path="/services/pilates-1-1" element={<Pilates11 />} />
           <Route path="/services/reformer-pilates" element={<ReformerPilates />} />
           <Route path="/services/mat-pilates" element={<MatPilates />} />
@@ -47,6 +50,7 @@ const App = () => (
           <Route path="/services/physiotherapy" element={<Physiotherapy />} />
           <Route path="/services/red-light-sauna" element={<RedLightSauna />} />
           <Route path="/services/cold-plunge" element={<ColdPlunge />} />
+          <Route path="/services/kids-lift-club" element={<KidsLiftClub />} />
           <Route path="/team" element={<Team />} />
           <Route path="/studio" element={<Studio />} />
           <Route path="/timetable" element={<Timetable />} />
