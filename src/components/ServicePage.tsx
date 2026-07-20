@@ -13,6 +13,7 @@ export interface ServicePageProps {
   whoFor: string[];
   expect: { t: string; d: string }[];
   related: { title: string; to: string; image: string }[];
+  enquireOnly?: boolean;
 }
 
 const ServicePage = (p: ServicePageProps) => (
@@ -27,15 +28,23 @@ const ServicePage = (p: ServicePageProps) => (
           </h1>
           <p className="mt-8 text-lg leading-relaxed text-foreground/80 max-w-lg">{p.intro}</p>
           <div className="mt-10 flex gap-3 flex-wrap">
-            <Link to="/timetable" className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-foreground/85 transition">
-              Book <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link to="/pricing" className="inline-flex items-center gap-2 border border-foreground/20 px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-surface-deep transition">
-              Pricing <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 border border-foreground/20 px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-surface-deep transition">
-              Enquire <ArrowRight className="h-4 w-4" />
-            </Link>
+            {p.enquireOnly ? (
+              <Link to="/contact" className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-foreground/85 transition">
+                Enquire <ArrowRight className="h-4 w-4" />
+              </Link>
+            ) : (
+              <>
+                <Link to="/timetable" className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-foreground/85 transition">
+                  Book <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link to="/pricing" className="inline-flex items-center gap-2 border border-foreground/20 px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-surface-deep transition">
+                  Pricing <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link to="/contact" className="inline-flex items-center gap-2 border border-foreground/20 px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-surface-deep transition">
+                  Enquire <ArrowRight className="h-4 w-4" />
+                </Link>
+              </>
+            )}
           </div>
         </div>
         <div className="md:col-span-6 relative min-h-[360px] overflow-hidden">
