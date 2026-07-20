@@ -108,23 +108,24 @@ const overview: { label: string; values: string[] }[] = [
 const Pricing = () => {
   const [params] = useSearchParams();
   const serviceSlug = params.get("service");
-  const service = serviceSlug ? servicePricing[serviceSlug] : null;
-  const visibleTiers = service ? tiers.filter((t) => t.name === "Foundation") : tiers;
+  const services = serviceSlug ? servicePricing[serviceSlug] : null;
+  const primary = services?.[0] ?? null;
+  const visibleTiers = services ? tiers.filter((t) => t.name === "Foundation") : tiers;
   return (
     <SiteLayout>
       <PageHero
-        eyebrow={service ? service.title : "Membership"}
-        title={service ? `${service.title} —` : "Pricing &"}
-        italic={service ? "pricing." : "membership."}
-        intro={service ? "Session rates and packs for " + service.title.toLowerCase() + ". All Personal Training clients hold a Foundation Membership — details below." : "Five tiers built around how you train and recover — from core gym access to unlimited recovery and member perks. Every membership includes our base amenities."}
+        eyebrow={primary ? primary.title : "Membership"}
+        title={primary ? `${primary.title} —` : "Pricing &"}
+        italic={primary ? "pricing." : "membership."}
+        intro={primary ? "Session rates and packs for " + primary.title.toLowerCase() + ". All Personal Training clients hold a Foundation Membership — details below." : "Five tiers built around how you train and recover — from core gym access to unlimited recovery and member perks. Every membership includes our base amenities."}
         image={hero}
       />
 
-      {service && (
-        <section className="container-x pt-16 md:pt-24">
+      {services && services.map((service, idx) => (
+        <section key={service.title} className={cn("container-x", idx === 0 ? "pt-16 md:pt-24" : "pt-12 md:pt-16") }>
           <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
             <div className="md:col-span-4">
-              <p className="eyebrow">Rates</p>
+              <p className="eyebrow">{service.eyebrow ?? "Rates"}</p>
               <h2 className="display text-4xl md:text-5xl mt-5">{service.title}.</h2>
               {service.bestValue && (
                 <div className="mt-8 inline-flex flex-col gap-3">
@@ -132,30 +133,33 @@ const Pricing = () => {
                   <p className="italic text-muted-foreground">{service.bestValue.label} — {service.bestValue.note}</p>
                 </div>
               )}
+              {service.note && (
+                <p className="mt-8 font-serif text-lg">{service.note}</p>
+              )}
             </div>
             <div className="md:col-span-7 md:col-start-6">
               <ul className="divide-y divide-border border-y border-border">
                 {service.rows.map((r) => (
                   <li key={r.label} className="py-5 flex items-baseline justify-between gap-6">
                     <span className="font-serif text-lg md:text-xl">{r.label}</span>
-                    <span className="display text-2xl md:text-3xl">{r.price}</span>
+                    <span className={cn("display text-2xl md:text-3xl", r.price.toLowerCase().includes("enquire") && "italic text-muted-foreground text-xl md:text-2xl")}>{r.price}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
         </section>
-      )}
+      ))}
 
       {/* Tier cards */}
       <section className="container-x py-16 md:py-24">
-        {service && (
+        {services && (
           <div className="mb-10">
             <p className="eyebrow">Membership</p>
             <h2 className="display text-4xl md:text-5xl mt-5">Required <span className="italic-accent">Foundation</span>.</h2>
           </div>
         )}
-        <div className={cn("grid gap-6", service ? "md:grid-cols-1 max-w-2xl" : "md:grid-cols-2 lg:grid-cols-3")}>
+        <div className={cn("grid gap-6", services ? "md:grid-cols-1 max-w-2xl" : "md:grid-cols-2 lg:grid-cols-3")}>
           {visibleTiers.map((t) => (
             <div
               key={t.name}
@@ -243,7 +247,7 @@ const Pricing = () => {
       </section>
 
       {/* Overview table */}
-      {!service && (
+      {!services && (
       <section className="container-x py-16 md:py-24 border-t border-border">
         <p className="eyebrow">Compare</p>
         <h2 className="display text-4xl md:text-6xl mt-5 mb-10">Membership overview.</h2>
@@ -278,7 +282,7 @@ const Pricing = () => {
       </section>
       )}
 
-      {service && (
+      {services && (
         <section className="container-x pb-16 md:pb-24 text-center">
           <Link
             to="/pricing"
