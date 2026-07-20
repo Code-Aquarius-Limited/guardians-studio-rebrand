@@ -56,4 +56,16 @@ export const servicePricing: Record<string, ServicePricing[]> = {
       bestValue: { label: "25 Session Pack", note: "save up to £625" },
     },
   ],
+  "reformer-pilates": [
+    {
+      title: "Reformer Pilates",
+      eyebrow: "4 – 6 Persons",
+      rows: [
+        { label: "Single", price: "£35" },
+        { label: "5 Session Pack", price: "£150" },
+        { label: "10 Session Pack", price: "£285" },
+        { label: "25 Session Pack", price: "£625" },
+      ],
+    },
+  ],
 };

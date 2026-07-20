@@ -76,6 +76,7 @@ export const Pilates11 = () => (
 
 export const ReformerPilates = () => (
   <ServicePage
+    slug="reformer-pilates"
     eyebrow="Reformer Pilates"
     title="Reformer Pilates in"
     italic="NW3."
