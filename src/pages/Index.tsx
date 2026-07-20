@@ -30,7 +30,7 @@ const Index = () => {
     <SiteLayout>
       {/* HERO */}
       <section className="relative h-screen min-h-[640px] w-full overflow-hidden">
-        <img src={hero} alt="Guardians Studio interior" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={hero} alt="Guardians Studios interior" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, hsla(0,0%,100%,0.2) 0%, hsla(0,0%,100%,0) 30%, hsla(220,14%,8%,0.45) 100%)" }} />
 
         <div className="relative h-full container-x flex flex-col justify-end pb-24 md:pb-28">
@@ -64,7 +64,7 @@ const Index = () => {
           </div>
           <div className="md:col-span-6 md:col-start-7">
             <p className="text-lg leading-relaxed text-foreground/80">
-              Guardians Studio is a small, considered space in North West London where coaching, recovery and community
+              Guardians Studios is a small, considered space in North West London where coaching, recovery and community
               live under one roof. Our work is rooted in longevity, training, treatment and rituals you can return to
               for the next forty years.
             </p>
@@ -157,7 +157,7 @@ const Index = () => {
           </div>
           <div className="md:col-span-7">
             <div className="aspect-[16/10] overflow-hidden rounded-3xl">
-              <img src={studio} alt="Guardians Studio interior" loading="lazy" className="h-full w-full object-cover" />
+              <img src={studio} alt="Guardians Studios interior" loading="lazy" className="h-full w-full object-cover" />
             </div>
           </div>
         </div>
