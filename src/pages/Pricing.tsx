@@ -184,6 +184,11 @@ const Pricing = () => {
                       ))}
                     </ul>
                   )}
+                  {t.footnote && (
+                    <p className={cn("italic text-sm leading-relaxed", t.featured ? "text-background/80" : "text-muted-foreground")}>
+                      {t.footnote}
+                    </p>
+                  )}
                 </div>
               )}
               <Link
