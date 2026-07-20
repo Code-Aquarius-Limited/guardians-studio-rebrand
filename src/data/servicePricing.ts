@@ -124,4 +124,22 @@ export const servicePricing: Record<string, ServicePricing[]> = {
       ],
     },
   ],
+  massage: [
+    {
+      title: "Deep Tissue Massage",
+      eyebrow: "By Appointment",
+      rows: [
+        { label: "1 Hour", price: "£85" },
+        { label: "90 Minutes", price: "£125" },
+      ],
+    },
+    {
+      title: "Sports Massage",
+      eyebrow: "By Appointment",
+      rows: [
+        { label: "1 Hour", price: "£110" },
+        { label: "90 Minutes", price: "£140" },
+      ],
+    },
+  ],
 };
