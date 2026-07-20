@@ -113,5 +113,15 @@ export const servicePricing: Record<string, ServicePricing[]> = {
         { label: "25 Session Pack", price: "£495" },
       ],
     },
+    {
+      title: "Kids / Teens Lift Club",
+      eyebrow: "Up to 6 Persons",
+      rows: [
+        { label: "Single", price: "£25" },
+        { label: "5 Session Pack", price: "£100" },
+        { label: "10 Session Pack", price: "£185" },
+        { label: "25 Session Pack", price: "£395" },
+      ],
+    },
   ],
 };
