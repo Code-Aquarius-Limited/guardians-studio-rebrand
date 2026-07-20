@@ -44,5 +44,16 @@ export const servicePricing: Record<string, ServicePricing[]> = {
       ],
       note: "On Request*",
     },
+    {
+      title: "Train Together",
+      eyebrow: "Couples · PT + Couple Reformer",
+      rows: [
+        { label: "Pay as you Go", price: "£120" },
+        { label: "5 Session Pack", price: "£550" },
+        { label: "10 Session Pack", price: "£1,050" },
+        { label: "25 Session Pack", price: "£2,375" },
+      ],
+      bestValue: { label: "25 Session Pack", note: "save up to £625" },
+    },
   ],
 };
