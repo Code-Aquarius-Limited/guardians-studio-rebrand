@@ -135,6 +135,7 @@ const Index = () => {
                 </li>
               ))}
             </ul>
+            <p className="mt-4 text-sm text-muted-foreground">*Bookings for gold and premium members only</p>
           </div>
         </div>
       </section>
