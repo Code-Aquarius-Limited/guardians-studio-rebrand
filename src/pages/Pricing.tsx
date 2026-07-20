@@ -215,7 +215,7 @@ const Pricing = () => {
                 <th className="text-left py-4 pr-4 font-normal eyebrow">Feature</th>
                 {tiers.map((t) => (
                   <th key={t.label} className={cn("py-4 px-4 text-center", t.tableTint)}>
-                    <span className="block font-serif text-xl">{t.label}</span>
+                    <span className="block font-serif text-xl">{t.name}</span>
                     <span className="block text-muted-foreground text-xs mt-1">{t.price} / mo</span>
                   </th>
                 ))}
