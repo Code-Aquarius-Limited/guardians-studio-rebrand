@@ -231,6 +231,7 @@ export const ColdPlunge = () => (
 
 export const SmallGroupPT = () => (
   <ServicePage
+    slug="small-group-pt"
     eyebrow="Small Group PT"
     title="Coached strength,"
     italic="in small groups."
