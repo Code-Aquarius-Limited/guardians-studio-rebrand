@@ -68,4 +68,16 @@ export const servicePricing: Record<string, ServicePricing[]> = {
       ],
     },
   ],
+  "mat-pilates": [
+    {
+      title: "Mat Pilates",
+      eyebrow: "Up to 15 Persons",
+      rows: [
+        { label: "Single", price: "£30" },
+        { label: "5 Session Pack", price: "£135" },
+        { label: "10 Session Pack", price: "£210" },
+        { label: "25 Session Pack", price: "£495" },
+      ],
+    },
+  ],
 };

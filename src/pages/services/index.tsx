@@ -96,6 +96,7 @@ export const ReformerPilates = () => (
 
 export const MatPilates = () => (
   <ServicePage
+    slug="mat-pilates"
     eyebrow="Mat Pilates"
     title="Mat Pilates,"
     italic="classical."
