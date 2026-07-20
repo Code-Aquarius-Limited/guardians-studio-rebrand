@@ -6,6 +6,7 @@ import logoAsset from "@/assets/wings-logo.png";
 
 const services = [
   { label: "Personal Training", to: "/services/personal-training" },
+  { label: "Small Group PT", to: "/services/small-group-pt" },
   { label: "Pilates 1:1", to: "/services/pilates-1-1" },
   { label: "Reformer Pilates", to: "/services/reformer-pilates" },
   { label: "Mat Pilates", to: "/services/mat-pilates" },
@@ -15,6 +16,7 @@ const services = [
   { label: "Physiotherapy", to: "/services/physiotherapy" },
   { label: "Red Light Sauna", to: "/services/red-light-sauna" },
   { label: "Cold Plunge Therapy", to: "/services/cold-plunge" },
+  { label: "Kids Lift Club", to: "/services/kids-lift-club" },
 ];
 
 const Header = () => {

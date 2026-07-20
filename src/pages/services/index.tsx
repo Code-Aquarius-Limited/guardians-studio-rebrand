@@ -13,6 +13,7 @@ import prenatal from "@/assets/prenatal.jpg";
 
 export const allServices = [
   { slug: "personal-training", title: "Personal Training", image: pt, description: "One-to-one coaching, programmed for the long term." },
+  { slug: "small-group-pt", title: "Small Group PT", image: pt, description: "Coached small-group sessions with the same programming rigour as 1:1." },
   { slug: "pilates-1-1", title: "Pilates 1:1", image: pilatesLight, description: "Private sessions with senior pilates instructors." },
   { slug: "reformer-pilates", title: "Reformer Pilates", image: reformer, description: "Spring-loaded strength, control and precision." },
   { slug: "mat-pilates", title: "Mat Pilates", image: pilates, description: "Classical mat work for strength and mobility." },
@@ -22,6 +23,7 @@ export const allServices = [
   { slug: "physiotherapy", title: "Physiotherapy", image: physiotherapy, description: "Assessment, rehab and clinical care." },
   { slug: "red-light-sauna", title: "Red Light Sauna", image: recovery, description: "Heat, light and stillness for circulation and repair." },
   { slug: "cold-plunge", title: "Cold Plunge Therapy", image: coldPlunge, description: "A daily ritual for recovery, focus and resilience." },
+  { slug: "kids-lift-club", title: "Kids Lift Club", image: pt, description: "Strength, movement and confidence for young athletes — enquire only." },
 ];
 
 const related = (slugs: string[]) =>
@@ -218,5 +220,44 @@ export const ColdPlunge = () => (
       { t: "Settle", d: "Quiet recovery in the lounge." },
     ]}
     related={related(["red-light-sauna", "massage", "yoga"])}
+  />
+);
+
+export const SmallGroupPT = () => (
+  <ServicePage
+    eyebrow="Small Group PT"
+    title="Coached strength,"
+    italic="in small groups."
+    hero={pt}
+    intro="Small-group personal training — the same programming and coaching rigour as 1:1, shared with a handful of like-minded members."
+    what="Small Group PT caps sessions to a few members so every rep still gets attention. You'll be programmed for, coached and progressed — with the energy of training alongside others who take it just as seriously."
+    benefits={["Coached technique", "Structured programming", "Community & accountability", "Better value than 1:1"]}
+    whoFor={["Members who thrive training with others", "Couples and friends training together", "1:1 clients wanting extra sessions", "Anyone building a consistent strength habit"]}
+    expect={[
+      { t: "Assessment", d: "A short movement screen before your first session." },
+      { t: "Session", d: "Coached strength and conditioning in a group of up to four." },
+      { t: "Progression", d: "Programming that builds week to week." },
+    ]}
+    related={related(["personal-training", "reformer-pilates", "physiotherapy"])}
+  />
+);
+
+export const KidsLiftClub = () => (
+  <ServicePage
+    eyebrow="Kids Lift Club"
+    title="Strength & confidence for"
+    italic="young athletes."
+    hero={pt}
+    intro="A dedicated strength and movement programme for kids and teens — coached with the same care we bring to every member. Enquire only."
+    what="Kids Lift Club introduces young athletes to strength training in a safe, structured environment. Sessions blend fundamental movement, resistance work and play — building lifelong confidence in how they move. Places are limited and by enquiry only."
+    benefits={["Foundational strength", "Coordination & athleticism", "Confidence & focus", "Healthy habits for life"]}
+    whoFor={["Young athletes in team sports", "Kids and teens new to strength training", "Parents looking for coached, safe programming", "Families training together"]}
+    expect={[
+      { t: "Enquiry", d: "Get in touch to discuss age, experience and goals." },
+      { t: "Onboarding", d: "A parent-and-child intro session with a senior coach." },
+      { t: "Programme", d: "Coached small-group sessions on a set weekly schedule." },
+    ]}
+    related={related(["personal-training", "small-group-pt", "physiotherapy"])}
+    enquireOnly
   />
 );
