@@ -155,6 +155,7 @@ export const Yoga = () => (
 
 export const Massage = () => (
   <ServicePage
+    slug="massage"
     eyebrow="Massage"
     title="Sports & deep tissue"
     italic="massage."
