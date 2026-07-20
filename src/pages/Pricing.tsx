@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const tiers = [
   {
     name: "Foundation",
-    label: "Base",
+    label: "Tier 01",
     price: "£35",
     blurb: "Core amenities & services to get you moving. Required for all Personal Training clients.",
     tint: "bg-[hsl(35,30%,97%)] border-[hsl(35,25%,92%)]",
@@ -24,8 +24,8 @@ const tiers = [
     ],
   },
   {
-    name: "Bronze Tier",
-    label: "Bronze",
+    name: "Bronze",
+    label: "Tier 02",
     price: "£80",
     blurb: "Base Membership plus one class per week.",
     tint: "bg-[hsl(25,35%,96.5%)] border-[hsl(25,30%,90%)]",
@@ -37,8 +37,8 @@ const tiers = [
     ],
   },
   {
-    name: "Silver Tier",
-    label: "Silver",
+    name: "Silver",
+    label: "Tier 03",
     price: "£135",
     blurb: "Base Membership with weekly classes, priority booking and guest access.",
     tint: "bg-[hsl(210,20%,97%)] border-[hsl(210,18%,91%)]",
@@ -53,8 +53,8 @@ const tiers = [
     ],
   },
   {
-    name: "Gold Tier",
-    label: "Gold",
+    name: "Gold",
+    label: "Tier 04",
     price: "£225",
     featured: true,
     blurb: "More classes, weekly wellness and member discounts.",
@@ -68,8 +68,8 @@ const tiers = [
     ],
   },
   {
-    name: "Platinum Tier",
-    label: "Platinum",
+    name: "Platinum",
+    label: "Tier 05",
     price: "£275",
     blurb: "Our complete membership with unlimited classes and recovery.",
     tint: "bg-[hsl(260,15%,97.5%)] border-[hsl(260,12%,91%)]",
