@@ -139,6 +139,14 @@ const Pricing = () => {
               <p className={cn("mt-4 text-sm leading-relaxed", t.featured ? "text-background/80" : "text-muted-foreground")}>
                 {t.blurb}
               </p>
+              {t.description && (
+                <div className={cn("mt-5", t.featured ? "text-background/80" : "text-muted-foreground")}>
+                  <p className={cn("eyebrow text-xs", t.featured && "!text-background/60")}>{t.description.heading}</p>
+                  {t.description.body.map((p, i) => (
+                    <p key={i} className="mt-2 text-sm leading-relaxed">{p}</p>
+                  ))}
+                </div>
+              )}
               <ul className="mt-6 space-y-3 flex-1">
                 {t.features.map((f) => (
                   <li key={f} className="flex gap-3 text-sm leading-relaxed">
