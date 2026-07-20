@@ -38,10 +38,10 @@ const tiers = [
     blurb: "Base Membership plus one class per week.",
     tint: "bg-[hsl(25,35%,96.5%)] border-[hsl(25,30%,90%)]",
     tableTint: "bg-[hsl(25,35%,98%)]",
-    features: [
-      "All core amenities & services",
+    includes: ["Base Membership — all core amenities"],
+    benefits: [
       "1 × Class per week (any class)",
-      "Bookable 48 hours in advance via the Guardians Studios app",
+      "Bookable 48 hours in advance",
     ],
   },
   {
@@ -147,14 +147,46 @@ const Pricing = () => {
                   ))}
                 </div>
               )}
-              <ul className="mt-6 space-y-3 flex-1">
-                {t.features.map((f) => (
-                  <li key={f} className="flex gap-3 text-sm leading-relaxed">
-                    <Check className={cn("h-4 w-4 mt-0.5 shrink-0", t.featured ? "text-background" : "text-foreground")} />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
+              {(t.includes || t.benefits || t.features) && (
+                <div className="mt-6 space-y-5 flex-1">
+                  {t.includes && (
+                    <div>
+                      <p className={cn("eyebrow text-xs mb-3", t.featured && "!text-background/60")}>Includes</p>
+                      <ul className="space-y-3">
+                        {t.includes.map((f) => (
+                          <li key={f} className="flex gap-3 text-sm leading-relaxed">
+                            <Check className={cn("h-4 w-4 mt-0.5 shrink-0", t.featured ? "text-background" : "text-foreground")} />
+                            <span>{f}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {t.benefits && (
+                    <div>
+                      <p className={cn("eyebrow text-xs mb-3", t.featured && "!text-background/60")}>Benefits</p>
+                      <ul className="space-y-3">
+                        {t.benefits.map((f) => (
+                          <li key={f} className="flex gap-3 text-sm leading-relaxed">
+                            <Check className={cn("h-4 w-4 mt-0.5 shrink-0", t.featured ? "text-background" : "text-foreground")} />
+                            <span>{f}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {t.features && !t.includes && !t.benefits && (
+                    <ul className="space-y-3">
+                      {t.features.map((f) => (
+                        <li key={f} className="flex gap-3 text-sm leading-relaxed">
+                          <Check className={cn("h-4 w-4 mt-0.5 shrink-0", t.featured ? "text-background" : "text-foreground")} />
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              )}
               <Link
                 to="/contact"
                 className={cn(
