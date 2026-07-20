@@ -36,6 +36,7 @@ const related = (slugs: string[]) =>
 
 export const PersonalTraining = () => (
   <ServicePage
+    slug="personal-training"
     eyebrow="Personal Training"
     title="One-to-one coaching in"
     italic="Hampstead."
