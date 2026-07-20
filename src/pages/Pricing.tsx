@@ -38,10 +38,10 @@ const tiers = [
     blurb: "Base Membership plus one class per week.",
     tint: "bg-[hsl(25,35%,96.5%)] border-[hsl(25,30%,90%)]",
     tableTint: "bg-[hsl(25,35%,98%)]",
-    features: [
-      "All core amenities & services",
+    includes: ["Base Membership — all core amenities"],
+    benefits: [
       "1 × Class per week (any class)",
-      "Bookable 48 hours in advance via the Guardians Studios app",
+      "Bookable 48 hours in advance",
     ],
   },
   {
