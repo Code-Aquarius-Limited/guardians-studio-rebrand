@@ -180,6 +180,9 @@ const Pricing = () => {
             </tbody>
           </table>
         </div>
+        <p className="text-center text-muted-foreground text-sm mt-8">
+          All add-ons bookable in advance via the Guardians Studios app
+        </p>
       </section>
 
       <FinalCta />
