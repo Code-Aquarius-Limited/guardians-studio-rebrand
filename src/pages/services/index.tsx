@@ -135,6 +135,7 @@ export const PrePostNatalPilates = () => (
 
 export const Yoga = () => (
   <ServicePage
+    slug="yoga"
     eyebrow="Yoga"
     title="Yoga,"
     italic="grounded."
