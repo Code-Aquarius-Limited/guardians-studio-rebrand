@@ -13,6 +13,7 @@ import prenatal from "@/assets/prenatal.jpg";
 
 export const allServices = [
   { slug: "personal-training", title: "Personal Training", image: pt, description: "One-to-one coaching, programmed for the long term." },
+  { slug: "small-group-pt", title: "Small Group PT", image: pt, description: "Coached small-group sessions with the same programming rigour as 1:1." },
   { slug: "pilates-1-1", title: "Pilates 1:1", image: pilatesLight, description: "Private sessions with senior pilates instructors." },
   { slug: "reformer-pilates", title: "Reformer Pilates", image: reformer, description: "Spring-loaded strength, control and precision." },
   { slug: "mat-pilates", title: "Mat Pilates", image: pilates, description: "Classical mat work for strength and mobility." },
@@ -22,6 +23,7 @@ export const allServices = [
   { slug: "physiotherapy", title: "Physiotherapy", image: physiotherapy, description: "Assessment, rehab and clinical care." },
   { slug: "red-light-sauna", title: "Red Light Sauna", image: recovery, description: "Heat, light and stillness for circulation and repair." },
   { slug: "cold-plunge", title: "Cold Plunge Therapy", image: coldPlunge, description: "A daily ritual for recovery, focus and resilience." },
+  { slug: "kids-lift-club", title: "Kids Lift Club", image: pt, description: "Strength, movement and confidence for young athletes — enquire only." },
 ];
 
 const related = (slugs: string[]) =>
