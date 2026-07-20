@@ -14,6 +14,7 @@ export interface ServicePageProps {
   expect: { t: string; d: string }[];
   related: { title: string; to: string; image: string }[];
   enquireOnly?: boolean;
+  slug?: string;
 }
 
 const ServicePage = (p: ServicePageProps) => (
@@ -37,7 +38,7 @@ const ServicePage = (p: ServicePageProps) => (
                 <Link to="/timetable" className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-foreground/85 transition">
                   Book <ArrowRight className="h-4 w-4" />
                 </Link>
-                <Link to="/pricing" className="inline-flex items-center gap-2 border border-foreground/20 px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-surface-deep transition">
+                <Link to={p.slug ? `/pricing?service=${p.slug}` : "/pricing"} className="inline-flex items-center gap-2 border border-foreground/20 px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-surface-deep transition">
                   Pricing <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link to="/contact" className="inline-flex items-center gap-2 border border-foreground/20 px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-surface-deep transition">
