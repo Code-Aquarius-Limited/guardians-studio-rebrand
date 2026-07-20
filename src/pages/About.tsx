@@ -52,7 +52,7 @@ const About = () => {
           <h2 className="display text-4xl md:text-5xl mt-6">Meet the <span className="italic-accent">Founders</span>.</h2>
           <div className="mt-8 space-y-6 text-lg leading-relaxed text-foreground/80">
             <p>
-              Sam and Neil met in 2012, working side by side at the same personal training company. A shared
+              Sam and Neil met in 2012, working side by side at Matt Roberts, one of London's leading personal training companies. A shared
               philosophy — and a stubborn belief in the long game — turned a friendship into a partnership.
             </p>
             <p>
