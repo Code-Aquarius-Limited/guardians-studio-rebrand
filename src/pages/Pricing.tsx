@@ -51,12 +51,12 @@ const tiers = [
     blurb: "Base Membership with weekly classes, priority booking and guest access.",
     tint: "bg-[hsl(210,20%,97%)] border-[hsl(210,18%,91%)]",
     tableTint: "bg-[hsl(210,20%,98.5%)]",
-    features: [
-      "All core amenities & services",
-      "2 × Classes per week",
+    includes: ["Base Membership — all core amenities"],
+    benefits: [
+      "2 × Class per week",
       "Priority class & wellness booking — up to 7 days ahead",
       "1 Guest Pass per month",
-      "1 Wellness room booking per month",
+      "1 wellness room booking per month",
       "All bookable via the Guardians Studios app",
     ],
   },
@@ -66,8 +66,8 @@ const tiers = [
     price: "£225",
     featured: true,
     blurb: "More classes, weekly wellness and member discounts.",
-    features: [
-      "All core amenities & services",
+    includes: ["Base Membership — all core amenities"],
+    benefits: [
       "Up to 3 × Classes per week",
       "1 Wellness room booking per week",
       "Priority booking — up to 14 days ahead",
@@ -82,16 +82,16 @@ const tiers = [
     blurb: "Our complete membership with unlimited classes and recovery.",
     tint: "bg-[hsl(260,15%,97.5%)] border-[hsl(260,12%,91%)]",
     tableTint: "bg-[hsl(260,15%,98.5%)]",
-    features: [
-      "All core amenities & services",
+    includes: ["Base Membership — all core amenities"],
+    benefits: [
       "Unlimited Sauna / Plunge (once daily)",
-      "Unlimited Classes (once daily)",
+      "Unlimited Classes per week (once daily)",
       "Priority booking — up to 21 days ahead",
       "10% off all private services",
       "Off-peak open gym access (train with no trainer)",
       "1 family member included",
-      "Free daily coffee · limited-edition Guardians tee",
     ],
+    footnote: "Free daily coffee · limited-edition Guardians tee",
   },
 ];
 
