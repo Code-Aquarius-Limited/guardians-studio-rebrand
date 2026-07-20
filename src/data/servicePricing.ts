@@ -80,4 +80,26 @@ export const servicePricing: Record<string, ServicePricing[]> = {
       ],
     },
   ],
+  yoga: [
+    {
+      title: "Group Yoga",
+      eyebrow: "10 – 15 Persons",
+      rows: [
+        { label: "Single", price: "£25" },
+        { label: "5 Session Pack", price: "£115" },
+        { label: "10 Session Pack", price: "£195" },
+        { label: "25 Session Pack", price: "£425" },
+      ],
+    },
+    {
+      title: "Small Group Yoga",
+      eyebrow: "Up to 6 Persons",
+      rows: [
+        { label: "Single", price: "£35" },
+        { label: "5 Session Pack", price: "£165" },
+        { label: "10 Session Pack", price: "£285" },
+        { label: "25 Session Pack", price: "£595" },
+      ],
+    },
+  ],
 };
