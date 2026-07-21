@@ -13,7 +13,6 @@ const tiers = [
     price: "£35",
     tint: "bg-[hsl(35,30%,97%)] border-[hsl(35,25%,92%)]",
     tableTint: "bg-[hsl(35,30%,98%)]",
-    includes: ["Base Membership — all core amenities"],
     benefits: [
       "Gym entry",
       "Custom profile on the Guardians app",
