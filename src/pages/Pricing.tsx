@@ -142,14 +142,32 @@ const Pricing = () => {
         </section>
       ))}
 
+      {/* Foundation explainer */}
+      {services ? (
+        <section className="container-x pt-16 md:pt-24">
+          <p className="eyebrow">Membership</p>
+          <h2 className="display text-4xl md:text-5xl mt-5">Required <span className="italic-accent">Foundation</span>.</h2>
+          <div className="max-w-3xl mt-6 space-y-4 text-foreground/80">
+            <p className="eyebrow text-xs">Why a Foundation membership</p>
+            <p>To maintain the exceptional standards that define Guardians Studios, all Personal Training clients will hold a Foundation Membership at £35 per month.</p>
+            <p>This supports the day-to-day running and upkeep of the studio — fresh towels, refreshments, daily cleaning, maintenance and the overall care of the facility. It ensures every member enjoys a consistently high-quality environment, and the level of service, comfort and attention to detail that sets Guardians apart.</p>
+            <p>What is also included: 1 Pilates or Yoga class per month.</p>
+          </div>
+        </section>
+      ) : (
+        <section className="container-x pt-16 md:pt-24">
+          <p className="eyebrow">Why a Foundation membership</p>
+          <h2 className="display text-4xl md:text-5xl mt-5">All Personal Training clients hold a Foundation Membership.</h2>
+          <div className="max-w-3xl mt-6 space-y-4 text-foreground/80">
+            <p>To maintain the exceptional standards that define Guardians Studios, all Personal Training clients will hold a Foundation Membership at £35 per month.</p>
+            <p>This supports the day-to-day running and upkeep of the studio — fresh towels, refreshments, daily cleaning, maintenance and the overall care of the facility. It ensures every member enjoys a consistently high-quality environment, and the level of service, comfort and attention to detail that sets Guardians apart.</p>
+            <p>What is also included: 1 Pilates or Yoga class per month.</p>
+          </div>
+        </section>
+      )}
+
       {/* Tier cards */}
       <section className="container-x py-16 md:py-24">
-        {services && (
-          <div className="mb-10">
-            <p className="eyebrow">Membership</p>
-            <h2 className="display text-4xl md:text-5xl mt-5">Required <span className="italic-accent">Foundation</span>.</h2>
-          </div>
-        )}
         <div className={cn("grid gap-6", services ? "md:grid-cols-1 max-w-2xl" : "md:grid-cols-2 lg:grid-cols-3")}>
           {visibleTiers.map((t) => (
             <div
