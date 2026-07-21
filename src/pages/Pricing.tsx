@@ -155,9 +155,7 @@ const Pricing = () => {
           </div>
         </section>
       ) : (
-        <section className="container-x pt-16 md:pt-24">
-          <p className="eyebrow">{"\n"}</p>
-          <h2 className="display text-4xl md:text-5xl mt-5">All Personal Training clients hold a Foundation Membership.</h2>
+        <section className="container-x pt-8 md:pt-12">
           <div className="mt-6 space-y-4 text-foreground/80">
             <p>To maintain the exceptional standards that define Guardians Studios, all Personal Training clients will hold a Foundation Membership at £35 per month.</p>
             <p>This supports the day-to-day running and upkeep of the studio — fresh towels, refreshments, daily cleaning, maintenance and the overall care of the facility. It ensures every member enjoys a consistently high-quality environment, and the level of service, comfort and attention to detail that sets Guardians apart.</p>
