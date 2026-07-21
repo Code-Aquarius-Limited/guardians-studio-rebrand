@@ -145,15 +145,17 @@ const Pricing = () => {
 
       {/* Foundation explainer */}
       {services ? (
-        <section className="container-x pt-8 md:pt-12">
-          <p className="eyebrow">Membership</p>
-          <h2 className="display text-4xl md:text-5xl mt-5">Required <span className="italic-accent">Foundation</span>.</h2>
-          <div className="mt-6 space-y-4 text-foreground/80">
-            <p>To maintain the exceptional standards that define Guardians Studios, all Personal Training clients will hold a Foundation Membership at £35 per month.</p>
-            <p>This supports the day-to-day running and upkeep of the studio — fresh towels, refreshments, daily cleaning, maintenance and the overall care of the facility. It ensures every member enjoys a consistently high-quality environment, and the level of service, comfort and attention to detail that sets Guardians apart.</p>
-            <p>What is also included: 1 Pilates or Yoga class per month.</p>
-          </div>
-        </section>
+        requiresFoundation && (
+          <section className="container-x pt-8 md:pt-12">
+            <p className="eyebrow">Membership</p>
+            <h2 className="display text-4xl md:text-5xl mt-5">Required <span className="italic-accent">Foundation</span>.</h2>
+            <div className="mt-6 space-y-4 text-foreground/80">
+              <p>To maintain the exceptional standards that define Guardians Studios, all Personal Training clients will hold a Foundation Membership at £35 per month.</p>
+              <p>This supports the day-to-day running and upkeep of the studio — fresh towels, refreshments, daily cleaning, maintenance and the overall care of the facility. It ensures every member enjoys a consistently high-quality environment, and the level of service, comfort and attention to detail that sets Guardians apart.</p>
+              <p>What is also included: 1 Pilates or Yoga class per month.</p>
+            </div>
+          </section>
+        )
       ) : (
         <section className="container-x pt-8 md:pt-12">
           <div className="space-y-4 text-foreground/80">
