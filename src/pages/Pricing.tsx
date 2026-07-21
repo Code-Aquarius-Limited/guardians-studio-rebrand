@@ -11,15 +11,6 @@ const tiers = [
     name: "Foundation",
     label: "Tier 01",
     price: "£35",
-    
-    description: {
-      heading: "Why a Foundation membership",
-      body: [
-        "To maintain the exceptional standards that define Guardians Studios, all Personal Training clients will hold a Foundation Membership at £35 per month.",
-        "This supports the day-to-day running and upkeep of the studio — fresh towels, refreshments, daily cleaning, maintenance and the overall care of the facility. It ensures every member enjoys a consistently high-quality environment, and the level of service, comfort and attention to detail that sets Guardians apart.",
-        "What is also included: 1 Pilates or Yoga class per month.",
-      ],
-    },
     tint: "bg-[hsl(35,30%,97%)] border-[hsl(35,25%,92%)]",
     tableTint: "bg-[hsl(35,30%,98%)]",
     features: [
