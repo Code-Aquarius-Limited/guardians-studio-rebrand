@@ -13,7 +13,8 @@ const tiers = [
     price: "£35",
     tint: "bg-[hsl(35,30%,97%)] border-[hsl(35,25%,92%)]",
     tableTint: "bg-[hsl(35,30%,98%)]",
-    features: [
+    includes: ["Base Membership — all core amenities"],
+    benefits: [
       "Gym entry",
       "Custom profile on the Guardians app",
       "Body composition testing",
@@ -184,7 +185,7 @@ const Pricing = () => {
                   / month
                 </span>
               </div>
-              {(t.includes || t.benefits || t.features) && (
+              {(t.includes || t.benefits) && (
                 <div className="mt-6 space-y-5 flex-1">
                   {t.includes && (
                     <div>
@@ -210,16 +211,6 @@ const Pricing = () => {
                         ))}
                       </ul>
                     </div>
-                  )}
-                  {t.features && !t.includes && !t.benefits && (
-                    <ul className="space-y-3">
-                      {t.features.map((f) => (
-                        <li key={f} className="flex gap-3 text-sm leading-relaxed">
-                          <Check className={cn("h-4 w-4 mt-0.5 shrink-0", t.featured ? "text-background" : "text-foreground")} />
-                          <span>{f}</span>
-                        </li>
-                      ))}
-                    </ul>
                   )}
                   {t.footnote && (
                     <p className={cn("italic text-sm leading-relaxed", t.featured ? "text-background/80" : "text-muted-foreground")}>
