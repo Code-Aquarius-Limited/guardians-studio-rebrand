@@ -102,13 +102,14 @@ const Pricing = () => {
   const services = serviceSlug ? servicePricing[serviceSlug] : null;
   const primary = services?.[0] ?? null;
   const visibleTiers = services ? tiers.filter((t) => t.name === "Foundation") : tiers;
+  const requiresFoundation = serviceSlug === "personal-training" || serviceSlug === "small-group-pt";
   return (
     <SiteLayout>
       <PageHero
         eyebrow={primary ? primary.title : "Membership"}
         title={primary ? `${primary.title} —` : "Pricing &"}
         italic={primary ? "pricing." : "membership."}
-        intro={primary ? "Session rates and packs for " + primary.title.toLowerCase() + ". All Personal Training clients hold a Foundation Membership — details below." : "Five tiers built around how you train and recover — from core gym access to unlimited recovery and member perks. Every membership includes our base amenities."}
+        intro={primary ? `Session rates and packs for ${primary.title.toLowerCase()}.${requiresFoundation ? " All Personal Training clients hold a Foundation Membership — details below." : ""}` : "Five tiers built around how you train and recover — from core gym access to unlimited recovery and member perks. Every membership includes our base amenities."}
         image={hero}
       />
 
