@@ -169,14 +169,6 @@ const Pricing = () => {
                   / month
                 </span>
               </div>
-              {t.description && (
-                <div className={cn("mt-5", t.featured ? "text-background/80" : "text-muted-foreground")}>
-                  <p className={cn("eyebrow text-xs", t.featured && "!text-background/60")}>{t.description.heading}</p>
-                  {t.description.body.map((p, i) => (
-                    <p key={i} className="mt-2 text-sm leading-relaxed">{p}</p>
-                  ))}
-                </div>
-              )}
               {(t.includes || t.benefits || t.features) && (
                 <div className="mt-6 space-y-5 flex-1">
                   {t.includes && (
