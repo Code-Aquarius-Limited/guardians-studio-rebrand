@@ -11,15 +11,6 @@ const tiers = [
     name: "Foundation",
     label: "Tier 01",
     price: "£35",
-    
-    description: {
-      heading: "Why a Foundation membership",
-      body: [
-        "To maintain the exceptional standards that define Guardians Studios, all Personal Training clients will hold a Foundation Membership at £35 per month.",
-        "This supports the day-to-day running and upkeep of the studio — fresh towels, refreshments, daily cleaning, maintenance and the overall care of the facility. It ensures every member enjoys a consistently high-quality environment, and the level of service, comfort and attention to detail that sets Guardians apart.",
-        "What is also included: 1 Pilates or Yoga class per month.",
-      ],
-    },
     tint: "bg-[hsl(35,30%,97%)] border-[hsl(35,25%,92%)]",
     tableTint: "bg-[hsl(35,30%,98%)]",
     features: [
@@ -151,14 +142,32 @@ const Pricing = () => {
         </section>
       ))}
 
+      {/* Foundation explainer */}
+      {services ? (
+        <section className="container-x pt-16 md:pt-24">
+          <p className="eyebrow">Membership</p>
+          <h2 className="display text-4xl md:text-5xl mt-5">Required <span className="italic-accent">Foundation</span>.</h2>
+          <div className="max-w-3xl mt-6 space-y-4 text-foreground/80">
+            <p className="eyebrow text-xs">Why a Foundation membership</p>
+            <p>To maintain the exceptional standards that define Guardians Studios, all Personal Training clients will hold a Foundation Membership at £35 per month.</p>
+            <p>This supports the day-to-day running and upkeep of the studio — fresh towels, refreshments, daily cleaning, maintenance and the overall care of the facility. It ensures every member enjoys a consistently high-quality environment, and the level of service, comfort and attention to detail that sets Guardians apart.</p>
+            <p>What is also included: 1 Pilates or Yoga class per month.</p>
+          </div>
+        </section>
+      ) : (
+        <section className="container-x pt-16 md:pt-24">
+          <p className="eyebrow">Why a Foundation membership</p>
+          <h2 className="display text-4xl md:text-5xl mt-5">All Personal Training clients hold a Foundation Membership.</h2>
+          <div className="max-w-3xl mt-6 space-y-4 text-foreground/80">
+            <p>To maintain the exceptional standards that define Guardians Studios, all Personal Training clients will hold a Foundation Membership at £35 per month.</p>
+            <p>This supports the day-to-day running and upkeep of the studio — fresh towels, refreshments, daily cleaning, maintenance and the overall care of the facility. It ensures every member enjoys a consistently high-quality environment, and the level of service, comfort and attention to detail that sets Guardians apart.</p>
+            <p>What is also included: 1 Pilates or Yoga class per month.</p>
+          </div>
+        </section>
+      )}
+
       {/* Tier cards */}
       <section className="container-x py-16 md:py-24">
-        {services && (
-          <div className="mb-10">
-            <p className="eyebrow">Membership</p>
-            <h2 className="display text-4xl md:text-5xl mt-5">Required <span className="italic-accent">Foundation</span>.</h2>
-          </div>
-        )}
         <div className={cn("grid gap-6", services ? "md:grid-cols-1 max-w-2xl" : "md:grid-cols-2 lg:grid-cols-3")}>
           {visibleTiers.map((t) => (
             <div
@@ -178,14 +187,6 @@ const Pricing = () => {
                   / month
                 </span>
               </div>
-              {t.description && (
-                <div className={cn("mt-5", t.featured ? "text-background/80" : "text-muted-foreground")}>
-                  <p className={cn("eyebrow text-xs", t.featured && "!text-background/60")}>{t.description.heading}</p>
-                  {t.description.body.map((p, i) => (
-                    <p key={i} className="mt-2 text-sm leading-relaxed">{p}</p>
-                  ))}
-                </div>
-              )}
               {(t.includes || t.benefits || t.features) && (
                 <div className="mt-6 space-y-5 flex-1">
                   {t.includes && (
