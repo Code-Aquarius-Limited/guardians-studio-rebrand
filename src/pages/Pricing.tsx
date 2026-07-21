@@ -185,7 +185,7 @@ const Pricing = () => {
                   / month
                 </span>
               </div>
-              {(t.includes || t.benefits || t.features) && (
+              {(t.includes || t.benefits) && (
                 <div className="mt-6 space-y-5 flex-1">
                   {t.includes && (
                     <div>
@@ -211,16 +211,6 @@ const Pricing = () => {
                         ))}
                       </ul>
                     </div>
-                  )}
-                  {t.features && !t.includes && !t.benefits && (
-                    <ul className="space-y-3">
-                      {t.features.map((f) => (
-                        <li key={f} className="flex gap-3 text-sm leading-relaxed">
-                          <Check className={cn("h-4 w-4 mt-0.5 shrink-0", t.featured ? "text-background" : "text-foreground")} />
-                          <span>{f}</span>
-                        </li>
-                      ))}
-                    </ul>
                   )}
                   {t.footnote && (
                     <p className={cn("italic text-sm leading-relaxed", t.featured ? "text-background/80" : "text-muted-foreground")}>
