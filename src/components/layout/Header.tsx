@@ -103,10 +103,10 @@ const Header = () => {
       <div
         className={cn(
           "lg:hidden overflow-hidden transition-[max-height] duration-500 border-t border-border",
-          open ? "max-h-[80vh]" : "max-h-0"
+          open ? "max-h-[calc(100vh-5rem)]" : "max-h-0"
         )}
       >
-        <div className="container-x py-6 flex flex-col gap-1">
+        <div className="container-x py-6 flex flex-col gap-1 max-h-[calc(100vh-5rem)] overflow-y-auto overscroll-contain pb-12">
           {[
             { to: "/about", label: "About" },
             { to: "/services", label: "Services" },
