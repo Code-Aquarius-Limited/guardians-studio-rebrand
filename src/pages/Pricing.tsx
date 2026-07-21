@@ -102,13 +102,14 @@ const Pricing = () => {
   const services = serviceSlug ? servicePricing[serviceSlug] : null;
   const primary = services?.[0] ?? null;
   const visibleTiers = services ? tiers.filter((t) => t.name === "Foundation") : tiers;
+  const requiresFoundation = serviceSlug === "personal-training" || serviceSlug === "small-group-pt";
   return (
     <SiteLayout>
       <PageHero
         eyebrow={primary ? primary.title : "Membership"}
         title={primary ? `${primary.title} —` : "Pricing &"}
         italic={primary ? "pricing." : "membership."}
-        intro={primary ? "Session rates and packs for " + primary.title.toLowerCase() + ". All Personal Training clients hold a Foundation Membership — details below." : "Five tiers built around how you train and recover — from core gym access to unlimited recovery and member perks. Every membership includes our base amenities."}
+        intro={primary ? `Session rates and packs for ${primary.title.toLowerCase()}.${requiresFoundation ? " All Personal Training clients hold a Foundation Membership — details below." : ""}` : "Five tiers built around how you train and recover — from core gym access to unlimited recovery and member perks. Every membership includes our base amenities."}
         image={hero}
       />
 
@@ -144,15 +145,17 @@ const Pricing = () => {
 
       {/* Foundation explainer */}
       {services ? (
-        <section className="container-x pt-8 md:pt-12">
-          <p className="eyebrow">Membership</p>
-          <h2 className="display text-4xl md:text-5xl mt-5">Required <span className="italic-accent">Foundation</span>.</h2>
-          <div className="mt-6 space-y-4 text-foreground/80">
-            <p>To maintain the exceptional standards that define Guardians Studios, all Personal Training clients will hold a Foundation Membership at £35 per month.</p>
-            <p>This supports the day-to-day running and upkeep of the studio — fresh towels, refreshments, daily cleaning, maintenance and the overall care of the facility. It ensures every member enjoys a consistently high-quality environment, and the level of service, comfort and attention to detail that sets Guardians apart.</p>
-            <p>What is also included: 1 Pilates or Yoga class per month.</p>
-          </div>
-        </section>
+        requiresFoundation && (
+          <section className="container-x pt-8 md:pt-12">
+            <p className="eyebrow">Membership</p>
+            <h2 className="display text-4xl md:text-5xl mt-5">Required <span className="italic-accent">Foundation</span>.</h2>
+            <div className="mt-6 space-y-4 text-foreground/80">
+              <p>To maintain the exceptional standards that define Guardians Studios, all Personal Training clients will hold a Foundation Membership at £35 per month.</p>
+              <p>This supports the day-to-day running and upkeep of the studio — fresh towels, refreshments, daily cleaning, maintenance and the overall care of the facility. It ensures every member enjoys a consistently high-quality environment, and the level of service, comfort and attention to detail that sets Guardians apart.</p>
+              <p>What is also included: 1 Pilates or Yoga class per month.</p>
+            </div>
+          </section>
+        )
       ) : (
         <section className="container-x pt-8 md:pt-12">
           <div className="space-y-4 text-foreground/80">
