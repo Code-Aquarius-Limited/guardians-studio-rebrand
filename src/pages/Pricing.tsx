@@ -56,8 +56,8 @@ const tiers = [
     name: "Gold",
     label: "Tier 04",
     price: "£225",
-    featured: true,
-    
+    tint: "bg-[hsl(45,35%,96%)] border-[hsl(45,28%,89%)]",
+    tableTint: "bg-[hsl(45,35%,98%)]",
     includes: ["Base Membership — all core amenities"],
     benefits: [
       "Up to 3 × Classes per week",
@@ -71,9 +71,7 @@ const tiers = [
     name: "Platinum",
     label: "Tier 05",
     price: "£275",
-    
-    tint: "bg-[hsl(260,15%,97.5%)] border-[hsl(260,12%,91%)]",
-    tableTint: "bg-[hsl(260,15%,98.5%)]",
+    featured: true,
     includes: ["Base Membership — all core amenities"],
     benefits: [
       "Unlimited Sauna / Plunge (once daily)",
