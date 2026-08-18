@@ -33,18 +33,6 @@ export const servicePricing: Record<string, ServicePricing[]> = {
       bestValue: { label: "25 Session Pack", note: "save up to £325" },
     },
     {
-      title: "Master Trainer",
-      eyebrow: "One on One · Personal Training",
-      rows: [
-        { label: "Initial Assessment · 60 mins", price: "£90" },
-        { label: "Pay as you Go", price: "Enquire Within" },
-        { label: "5 Session Pack", price: "Enquire Within" },
-        { label: "10 Session Pack", price: "Enquire Within" },
-        { label: "25 Session Pack", price: "Enquire Within" },
-      ],
-      note: "On Request*",
-    },
-    {
       title: "Train Together",
       eyebrow: "Couples · PT + Couple Reformer",
       rows: [
