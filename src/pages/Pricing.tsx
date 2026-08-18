@@ -165,6 +165,7 @@ const Pricing = () => {
       )}
 
       {/* Tier cards */}
+      {visibleTiers.length > 0 && (
       <section className="container-x py-16 md:py-24">
         <div className={cn("grid gap-6", services ? "md:grid-cols-1 max-w-2xl" : "md:grid-cols-2 lg:grid-cols-3")}>
           {visibleTiers.map((t) => (
@@ -234,6 +235,7 @@ const Pricing = () => {
           ))}
         </div>
       </section>
+      )}
 
       {/* Overview table */}
       {!services && (
