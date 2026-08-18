@@ -100,7 +100,7 @@ const Pricing = () => {
   const services = serviceSlug ? servicePricing[serviceSlug] : null;
   const primary = services?.[0] ?? null;
   const visibleTiers = services ? tiers.filter((t) => t.name === "Foundation") : tiers;
-  const requiresFoundation = serviceSlug === "personal-training" || serviceSlug === "small-group-pt";
+  const requiresFoundation = serviceSlug === "personal-training";
   return (
     <SiteLayout>
       <PageHero
