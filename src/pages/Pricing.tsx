@@ -274,7 +274,7 @@ const Pricing = () => {
       )}
 
       {services && (
-        <section className="container-x pb-16 md:pb-24 text-center">
+        <section className="container-x pt-16 md:pt-24 pb-16 md:pb-24 text-center">
           <Link
             to="/pricing"
             className="inline-flex items-center gap-2 border border-foreground/20 px-6 py-4 rounded-full text-[0.72rem] uppercase tracking-[0.22em] hover:bg-foreground hover:text-background transition"
