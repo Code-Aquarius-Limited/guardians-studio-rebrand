@@ -6,6 +6,26 @@ export type ServicePricing = {
   note?: string;
 };
 
+const flowPack: ServicePricing = {
+  title: "Flow Pack",
+  eyebrow: "Mat Pilates & Yoga",
+  rows: [
+    { label: "5 Session Pack", price: "£120" },
+    { label: "10 Session Pack", price: "£220" },
+  ],
+  note: "Use across any Mat Pilates or Yoga class.",
+};
+
+const studioPack: ServicePricing = {
+  title: "Studio Pack",
+  eyebrow: "Reformer Pilates & Small Group PT",
+  rows: [
+    { label: "5 Session Pack", price: "£165" },
+    { label: "10 Session Pack", price: "£285" },
+  ],
+  note: "Use across any Reformer Pilates or Small Group PT session.",
+};
+
 export const servicePricing: Record<string, ServicePricing[]> = {
   "personal-training": [
     {
@@ -44,71 +64,57 @@ export const servicePricing: Record<string, ServicePricing[]> = {
       bestValue: { label: "25 Session Pack", note: "save up to £625" },
     },
   ],
+  "pilates-1-1": [
+    {
+      title: "Pilates 1:1",
+      eyebrow: "Private · By Enquiry",
+      rows: [{ label: "1 Hour", price: "£90" }],
+      note: "Bookable by enquiry only.",
+    },
+  ],
   "reformer-pilates": [
     {
       title: "Reformer Pilates",
-      eyebrow: "4 – 6 Persons",
-      rows: [
-        { label: "Single", price: "£35" },
-        { label: "5 Session Pack", price: "£150" },
-        { label: "10 Session Pack", price: "£285" },
-        { label: "25 Session Pack", price: "£625" },
-      ],
+      eyebrow: "Small Group · 4 – 6 Persons",
+      rows: [{ label: "Pay as you Go", price: "£35" }],
     },
+    studioPack,
   ],
   "mat-pilates": [
     {
       title: "Mat Pilates",
       eyebrow: "Up to 15 Persons",
-      rows: [
-        { label: "Single", price: "£30" },
-        { label: "5 Session Pack", price: "£135" },
-        { label: "10 Session Pack", price: "£210" },
-        { label: "25 Session Pack", price: "£495" },
-      ],
+      rows: [{ label: "Pay as you Go", price: "£25" }],
     },
+    flowPack,
   ],
   yoga: [
     {
-      title: "Group Yoga",
+      title: "Yoga",
       eyebrow: "10 – 15 Persons",
-      rows: [
-        { label: "Single", price: "£25" },
-        { label: "5 Session Pack", price: "£115" },
-        { label: "10 Session Pack", price: "£195" },
-        { label: "25 Session Pack", price: "£425" },
-      ],
+      rows: [{ label: "Pay as you Go", price: "£25" }],
     },
     {
       title: "Small Group Yoga",
       eyebrow: "Up to 6 Persons",
-      rows: [
-        { label: "Single", price: "£35" },
-        { label: "5 Session Pack", price: "£165" },
-        { label: "10 Session Pack", price: "£285" },
-        { label: "25 Session Pack", price: "£595" },
-      ],
+      rows: [{ label: "Pay as you Go", price: "£35" }],
     },
+    flowPack,
   ],
   "small-group-pt": [
     {
       title: "Group Training",
       eyebrow: "Up to 6 Persons",
-      rows: [
-        { label: "Single", price: "£35" },
-        { label: "5 Session Pack", price: "£150" },
-        { label: "10 Session Pack", price: "£275" },
-        { label: "25 Session Pack", price: "£495" },
-      ],
+      rows: [{ label: "Pay as you Go", price: "£35" }],
     },
+    studioPack,
     {
       title: "Kids / Teens Lift Club",
       eyebrow: "Up to 6 Persons",
       rows: [
-        { label: "Single", price: "£25" },
+        { label: "Pay as you Go", price: "£25" },
         { label: "5 Session Pack", price: "£100" },
         { label: "10 Session Pack", price: "£185" },
-        { label: "25 Session Pack", price: "£395" },
       ],
     },
   ],

@@ -57,6 +57,8 @@ export const PersonalTraining = () => (
 
 export const Pilates11 = () => (
   <ServicePage
+    slug="pilates-1-1"
+    enquireOnly
     eyebrow="Pilates 1:1"
     title="Private pilates,"
     italic="programmed."
